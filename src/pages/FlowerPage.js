@@ -1,4 +1,4 @@
-export function HomePage() {
+export async function FlowerPage() {
   const pageContent = document.createElement("div");
 
   const heading = document.createElement("h1");

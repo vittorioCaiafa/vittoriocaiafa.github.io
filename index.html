@@ -23,11 +23,14 @@
     <div id="content"></div>
 
     <script type="module">
-      import { HomePage } from './src/pages/HomePage.js';
+      import { FlowerPage } from './src/pages/FlowerPage.js';
 
-      document.getElementById("flor-btn").onclick = () => {
-        document.getElementById("content").innerHTML = HomePage();
+      document.getElementById("flor-btn").onclick = async () => {
+        const contentDiv = document.getElementById("content");
+        contentDiv.innerHTML = ""; // Clear previous content
+        contentDiv.appendChild(await FlowerPage()); // Append the DOM element instead of setting innerHTML
       };
+
     </script>
   </body>
 </html>
