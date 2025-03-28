@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -16,6 +18,7 @@
         }
         #flor-container {
             margin-top: 20px;
+            text-align: center;
         }
         img {
             width: 300px;
@@ -41,21 +44,21 @@
 <body>
     <h1>🌸 La Flor del Día para mi Novia Yazmin 🌸</h1>
     <div id="flor-container">
-        <img id="flor" src="" alt="Flor del día" style="display: none;">
+        <img id="flor" src="" alt="Flor del día">
     </div>
-    <button onclick="obtenerFlor()">Obtener Flor</button>
+    <button onclick="getFlower()">Obtener Flor</button>
 
-    <script>
-        const url = "https://img.freepik.com/foto-gratis/primer-disparo-flor-morada_181624-25863.jpg?t=st=1743175252~exp=1743178852~hmac=c5dec0139e7a04f36cf1706cea97ed522c28dc58fd1654f515372880903beed0&w=1380";
+    <script src="constants.js"></script>
+<script>
+    function getFlower() {
+        //const fecha = new Date().getDate();
+        //const index = fecha % flores.length;
+        
+        const img = document.getElementById("flor");
+        img.src = flowerUrl;
+        img.style.display = "block";
+    }
+</script>
 
-        function obtenerFlor() {
-            //const fecha = new Date().getDate(); // Día del mes para variar la imagen
-            //const index = fecha % flores.length;
-            
-            const img = document.getElementById("flor");
-            img.src = url;
-            img.style.display = "block";
-        }
-    </script>
 </body>
 </html>
