@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="./favicon.ico">
     <title>La Flor de Yazmin 🌸</title>
     <style>
       body {
@@ -47,16 +48,15 @@
     <button onclick="getFlower()">Obtener Flor</button>
 
     <script type="module">
-        import { flowerUrl } from "./utils/constants.js";
-      
-        function getFlower() {
-            const img = document.getElementById("flor");
-            img.src = flowerUrl;
-            img.style.display = "block";
-        }
-      
-        window.getFlower = getFlower;
-      </script>
-      
+      import { flowerUrl } from "./src/utils/constants";
+
+      function getFlower() {
+        const img = document.getElementById("flor");
+        img.src = flowerUrl;
+        img.style.display = "block";
+      }
+
+      window.getFlower = getFlower;
+    </script>
   </body>
 </html>
