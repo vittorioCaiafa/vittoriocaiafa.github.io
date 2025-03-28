@@ -36,3 +36,35 @@ button:hover {
   background-color: #232323;
   transition: 0.5s;
 }
+
+/* Aplica Flexbox al header */
+header {
+  display: flex;
+  justify-content: space-between; /* Distribuye los elementos con espacio entre ellos */
+  align-items: center; /* Alinea verticalmente los elementos */
+  padding: 20px; /* Espaciado alrededor */
+}
+
+h1 {
+  margin: 0; /* Elimina márgenes por defecto */
+}
+
+nav ul {
+  display: flex; /* Aplica flexbox a la lista */
+  list-style-type: none; /* Elimina los puntos de la lista */
+  margin: 0; /* Elimina márgenes */
+  padding: 0; /* Elimina el padding */
+}
+
+nav ul li {
+  margin: 0 10px; /* Espacio horizontal entre los elementos de la lista */
+}
+
+nav ul li a {
+  text-decoration: none; /* Elimina el subrayado de los enlaces */
+  color: black; /* Color del texto */
+}
+
+nav ul li a:hover {
+  color: #d63384; /* Color cuando el mouse pasa por encima */
+}
