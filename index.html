@@ -47,10 +47,18 @@
     <button onclick="obtenerFlor()">Obtener Flor</button>
 
     <script>
+        const flores = [
+            "https://www.freepik.es/foto-gratis/hermosa-flor-rosa_123456.htm",
+            "https://www.freepik.es/foto-gratis/magnolia-blanca-brillando-sol_654321.htm",
+            "https://www.freepik.es/foto-gratis/tulipan-rojo-jardin_987654.htm",
+            "https://www.freepik.es/foto-gratis/orquidea-exotica_192837.htm",
+            "https://www.freepik.es/foto-gratis/girasol-brillante-cielo-azul_564738.htm"
+        ];
+
         function obtenerFlor() {
-            const fecha = new Date().toISOString().slice(0, 10); // Obtener la fecha actual (YYYY-MM-DD)
-            const seed = btoa(fecha); // Generar una semilla basada en la fecha
-            const url = `https://source.unsplash.com/400x400/?flower&sig=${seed}`;
+            const fecha = new Date().getDate(); // Día del mes para variar la imagen
+            const index = fecha % flores.length;
+            const url = flores[index];
             
             const img = document.getElementById("flor");
             img.src = url;
