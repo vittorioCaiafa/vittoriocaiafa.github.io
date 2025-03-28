@@ -46,15 +46,17 @@
     </div>
     <button onclick="getFlower()">Obtener Flor</button>
 
-    <script src="./utils/constants.js">
-      function getFlower() {
-          //const fecha = new Date().getDate();
-          //const index = fecha % flores.length;
-
-          const img = document.getElementById("flor");
-          img.src = flowerUrl;
-          img.style.display = "block";
-      }
-    </script>
+    <script type="module">
+        import { flowerUrl } from "./utils/constants.js";
+      
+        function getFlower() {
+            const img = document.getElementById("flor");
+            img.src = flowerUrl;
+            img.style.display = "block";
+        }
+      
+        window.getFlower = getFlower;
+      </script>
+      
   </body>
 </html>
