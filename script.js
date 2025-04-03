@@ -18,3 +18,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
   sections.forEach((section) => observer.observe(section));
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const toggleSwitch = document.querySelector(".switch input");
+  const body = document.body;
+
+  // Comprobar si el usuario ya tiene una preferencia guardada
+  if (localStorage.getItem("darkMode") === "enabled") {
+    body.classList.add("dark-mode");
+    toggleSwitch.checked = true;
+  }
+
+  toggleSwitch.addEventListener("change", function () {
+    if (this.checked) {
+      body.classList.add("dark-mode");
+      localStorage.setItem("darkMode", "enabled"); // Guarda la preferencia
+    } else {
+      body.classList.remove("dark-mode");
+      localStorage.setItem("darkMode", "disabled");
+    }
+  });
+});
