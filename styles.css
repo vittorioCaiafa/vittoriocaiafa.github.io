@@ -106,9 +106,11 @@ nav ul li a:hover {
 }
 
 .section img.section-logo {
-  margin-top: 100px;
+  margin-bottom: -40px;
   opacity: 0.4;
   filter: brightness(0) invert(0.5);
+  height: 9vw;
+  width: 9vw;
 }
 
 h2 {
@@ -165,6 +167,13 @@ footer {
   }
   .section-container {
     height: 70vw;
+  }
+  .section img.section-logo {
+    margin-bottom: -25px;
+    opacity: 0.4;
+    filter: brightness(0) invert(0.5);
+    height: 9vw;
+    width: 9vw;
   }
 }
 
