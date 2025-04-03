@@ -158,6 +158,9 @@ footer {
   .section-content p {
     font-size: 3vw;
   }
+  .section-container{
+    height: 70vw;
+  }
 }
 
 /* From Uiverse.io by satyamchaudharydev */
