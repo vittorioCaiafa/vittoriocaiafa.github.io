@@ -5,255 +5,242 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portafolio</title>
     <link rel="stylesheet" href="styles.css" />
+    <script src="components/section-left.js" defer></script>
+    <script src="components/section-right.js" defer></script>
+    <script src="components/section-double.js" defer></script>
+    <script src="components/theme-changerjs" defer></script>
+    <script src="components/nav-bar.js" defer></script>
   </head>
   <body>
-    <header>
-      <h1>Vittorio Caiafa</h1>
-      <p>Ingeniero en Sistemas @ SNP Group</p>
-      <label class="switch">
-        <input type="checkbox" />
-        <span class="slider"></span>
-      </label>
-    </header>
-    <nav>
-      <ul>
-        <li><a href="#about">Sobre Mí</a></li>
-        <li><a href="#skills">Habilidades</a></li>
-        <li><a href="#projects">Proyectos</a></li>
-        <li><a href="#work-experience">Experiencia</a></li>
-        <li><a href="#titles">Títulos</a></li>
-        <li><a href="#education">Educación</a></li>
-        <li><a href="#languages">Lenguajes</a></li>
-        <li><a href="#contact">Contacto</a></li>
-      </ul>
-    </nav>
-    <div class="section-container">
-      <div class="section slide-right">
-        <div class="section-content">
+    <img src="assets/backgrounds/star-night.jpg" class="background-img" />
+    <div class="content">
+      <nav-bar></nav-bar>
+      <div
+        style="
+          text-align: left;
+          margin-left: 15%;
+          margin-top: 150px;
+          margin-bottom: 150px;
+        "
+      >
+        <h1 style="font-size: 50px">
+          Hola 👋 soy<br />
+          <span
+            style="
+              background: linear-gradient(135deg, #3885c3 0%, #2b59a7 100%);
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+              display: inline-block;
+            "
+            >Vittorio Caiafa</span
+          >
+        </h1>
+        <button
+          style="
+            color: white;
+            background: linear-gradient(135deg, #3885c3 0%, #2b59a7 100%);
+            padding: 10px 20px;
+            border: none;
+            border-radius: 15px;
+            margin-top: -20px;
+            margin-bottom: 45%;
+            font-size: 20px;
+            cursor: pointer;
+          "
+        >
+          Saber más
+        </button>
+      </div>
+
+      <section-left
+        icon="assets/icons/aboutme.png"
+        title="Sobre Mí"
+        description="Tengo 24 años. Soy Ingeniero en Sistemas graduado de la Universidad ORT Uruguay. Me gusta hacer ir a la playa, hacer deporte, cocinar y escuchar música."
+        image="https://res.cloudinary.com/homedesigncloud/image/upload/v1743624245/IMG_1008_gmckkn.jpg"
+      >
+      </section-left>
+
+      <div class="image-row" style="margin-bottom: 50px">
+        <img src="assets/icons/beach.png" />
+        <img src="assets/icons/gym.png" />
+        <img src="assets/icons/sushi.png" />
+        <img src="assets/icons/music.png" />
+      </div>
+
+      <section-double
+        title-left="Lenguajes de programación"
+        description-left="assets/technologies/net.png, assets/technologies/angular.png, assets/technologies/c.png, assets/technologies/cs.png, assets/technologies/cpp.png, assets/technologies/css.png, assets/technologies/html.png, assets/technologies/java.png, assets/technologies/jest.png, assets/technologies/js.png, assets/technologies/nodejs.png, assets/technologies/py.png, assets/technologies/react.png, assets/technologies/ts.png"
+        title-right="Herramientas"
+        description-right=""
+      ></section-double>
+
+      <section-left
+        icon="assets/icons/projects.png"
+        title="Projects"
+        description="He desarrollado variedad de aplicaciones de todo tipo durante mi carrera, mi proyecto más reciente es la tesis HomeDesign; plataforma que renderiza muebles 3D a partir de fotografias de muebles reales."
+        image="https://res.cloudinary.com/homedesigncloud/image/upload/v1743626856/curso-Herramientas-planificacion-seguimiento-control-proyectos-online-a-tu-ritmo_ejzr0y.webp"
+      >
+      </section-left>
+
+      <section-right
+        icon="assets/icons/experience.png"
+        title="Experiencia"
+        description="Trabajo en SNP Group como Consultor de Transformacion. He estado colaborado como cutover de distintos proyectos en donde soy responsable de gestionar la migración de bases de datos de clientes a la plataforma."
+        image="https://res.cloudinary.com/homedesigncloud/image/upload/v1743626739/persona-caminando-al-trabajo_cfwcqu.jpg"
+      >
+      </section-right>
+
+      <div class="section-container">
+        <div class="section left slide-right">
           <img
-            class="section-logo"
-            src="https://res.cloudinary.com/homedesigncloud/image/upload/v1743620377/about-us-icon-34429_ahglze.png"
-            alt="Sobre Mí"
+            id="work-experience"
+            src="https://res.cloudinary.com/homedesigncloud/image/upload/v1743626739/persona-caminando-al-trabajo_cfwcqu.jpg"
+            alt="Imagen Difuminada"
+            class="blurred-image"
           />
-          <h2>Sobre Mí</h2>
-          <p>
-            Tengo 23 años. Soy Ingeniero en Sistemas graduado de la Universidad ORT
-            Uruguay. Me gusta hacer deporte, ir al gimnasio y escuchar música.
-          </p>
+        </div>
+        <div class="section slide-left">
+          <div class="section-content">
+            <img
+              class="section-logo"
+              src="https://res.cloudinary.com/homedesigncloud/image/upload/v1743628971/278f0324b4a523452b7c44b38177d2f3-corbata-silueta-ropa_d0x8ov.png"
+              alt="Experiencia Laboral"
+            />
+            <h2>Experiencia Laboral</h2>
+            <p>
+              Trabajo en SNP Group como Cutover, donde soy responsable de
+              gestionar la migración de bases de datos de clientes a la
+              plataforma.
+            </p>
+          </div>
         </div>
       </div>
-      <div class="section right slide-left">
-        <img
-          id="about"
-          src="https://res.cloudinary.com/homedesigncloud/image/upload/v1743624245/IMG_1008_gmckkn.jpg"
-          alt="Imagen Difuminada"
-          class="blurred-image"
-        />
-      </div>
-    </div>
 
-    <div class="section-container">
-      <div class="section left slide-right">
-        <img
-          id="skills"
-          src="https://res.cloudinary.com/homedesigncloud/image/upload/v1743624670/lenguajes-de-programacion-mas-utilizados_zgmuvp.webp"
-          alt="Imagen Difuminada"
-          class="blurred-image"
-        />
-      </div>
-      <div class="section slide-left">
-        <div class="section-content">
+      <div class="section-container">
+        <div class="section slide-right">
+          <div class="section-content">
+            <img
+              class="section-logo"
+              src="https://res.cloudinary.com/homedesigncloud/image/upload/v1743621971/graduation-cap-icon-graduation-icons-4f75da_qnregj.webp"
+              alt="Títulos"
+            />
+            <h2>Títulos</h2>
+            <p>Ingeniero en Sistemas</p>
+            <p>Ayudante de Ingeniero en Sistemas</p>
+            <p>Licenciado en Ingeniería de Software</p>
+          </div>
+        </div>
+        <div class="section right slide-left">
           <img
-            class="section-logo"
-            src="https://res.cloudinary.com/homedesigncloud/image/upload/v1743629280/1536550-200_bropbk.png"
-            alt="Habilidades"
+            id="titles"
+            src="https://res.cloudinary.com/homedesigncloud/image/upload/v1743626425/titlesimage_hpn4ld.webp"
+            alt="Imagen Difuminada"
+            class="blurred-image"
           />
-          <h2>Habilidades</h2>
-          <p>
-            <b>Lenguajes:</b> React, TypeScript, JavaScript, Java, Angular, SQL,
-            HTML, CSS, Git
-          </p>
-          <p><b>Herramientas:</b> AWS, API, Bases de datos, Jira, Github</p>
         </div>
       </div>
-    </div>
 
-    <div class="section-container">
-      <div class="section slide-right">
-        <div class="section-content">
+      <div class="section-container">
+        <div class="section left slide-right">
           <img
-            class="section-logo"
-            src="https://res.cloudinary.com/homedesigncloud/image/upload/v1743629139/proyectos-removebg-preview_qe6hkz.png"
-            alt="Proyectos"
+            id="education"
+            src="https://res.cloudinary.com/homedesigncloud/image/upload/v1743626948/rama-1-780x445_pjuro3.jpg"
+            alt="Imagen Difuminada"
+            class="blurred-image"
           />
-          <h2>Proyectos</h2>
-          <p>
-            He desarrollado variedad de aplicaciones de todo tipo durante mi
-            carrera, mi proyecto más reciente es la tesis HomeDesign; plataforma
-            que renderiza muebles 3D a partir de fotografias de muebles reales.
-          </p>
+        </div>
+        <div class="section slide-left">
+          <div class="section-content">
+            <img
+              class="section-logo"
+              src="https://res.cloudinary.com/homedesigncloud/image/upload/v1743628805/symbole-de-l-education-livre-noir_mzxfbw.png"
+              alt="Educación"
+            />
+            <h2>Educación</h2>
+            <p><b>Colegio Inglés</b></p>
+            <p>Primaria y Secundaria</p>
+            <p><b>Universidad ORT Uruguay</b></p>
+            <p>Ingenieria en Sistemas</p>
+          </div>
         </div>
       </div>
-      <div class="section right slide-left">
-        <img
-          id="projects"
-          src="https://res.cloudinary.com/homedesigncloud/image/upload/v1743626856/curso-Herramientas-planificacion-seguimiento-control-proyectos-online-a-tu-ritmo_ejzr0y.webp"
-          alt="Imagen Difuminada"
-          class="blurred-image"
-        />
-      </div>
-    </div>
 
-    <div class="section-container">
-      <div class="section left slide-right">
-        <img
-          id="work-experience"
-          src="https://res.cloudinary.com/homedesigncloud/image/upload/v1743626739/persona-caminando-al-trabajo_cfwcqu.jpg"
-          alt="Imagen Difuminada"
-          class="blurred-image"
-        />
-      </div>
-      <div class="section slide-left">
-        <div class="section-content">
+      <div class="section-container">
+        <div class="section slide-right">
+          <div class="section-content">
+            <img
+              class="section-logo"
+              src="https://res.cloudinary.com/homedesigncloud/image/upload/v1746451022/chat-removebg-preview_rr3h2a.png"
+              alt="Idiomas"
+            />
+            <h2>Idiomas</h2>
+            <p>Español - Nativo</p>
+            <p>Inglés - Avanzado (Cambridge First Certificate - B2)</p>
+            <p>Portugués - Intermedio (ULBRA Examen Intermediario - B1)</p>
+          </div>
+        </div>
+        <div class="section right slide-left">
           <img
-            class="section-logo"
-            src="https://res.cloudinary.com/homedesigncloud/image/upload/v1743628971/278f0324b4a523452b7c44b38177d2f3-corbata-silueta-ropa_d0x8ov.png"
-            alt="Experiencia Laboral"
+            id="languages"
+            src="https://res.cloudinary.com/homedesigncloud/image/upload/v1746451482/file-20220421-11-2kndr3_hd11wj.avif"
+            alt="Imagen Difuminada"
+            class="blurred-image"
           />
-          <h2>Experiencia Laboral</h2>
-          <p>
-            Trabajo en SNP Group como Cutover, donde soy responsable de
-            gestionar la migración de bases de datos de clientes a la
-            plataforma.
-          </p>
         </div>
       </div>
-    </div>
 
-    <div class="section-container">
-      <div class="section slide-right">
-        <div class="section-content">
+      <div class="section-container">
+        <div class="section left slide-right">
           <img
-            class="section-logo"
-            src="https://res.cloudinary.com/homedesigncloud/image/upload/v1743621971/graduation-cap-icon-graduation-icons-4f75da_qnregj.webp"
-            alt="Títulos"
+            id="contact"
+            src="https://res.cloudinary.com/homedesigncloud/image/upload/v1743627269/contacto_pzitsc.jpg"
+            alt="Imagen Difuminada"
+            class="blurred-image"
           />
-          <h2>Títulos</h2>
-          <p>Ingeniero en Sistemas</p>
-          <p>Ayudante de Ingeniero en Sistemas</p>
-          <p>Licenciado en Ingeniería de Software</p>
+        </div>
+        <div class="section slide-left">
+          <div class="section-content">
+            <img
+              class="section-logo"
+              src="https://res.cloudinary.com/homedesigncloud/image/upload/v1743628679/png-transparent-man-people-person-user-users-eon-social-media-contact-info-icon-removebg-preview_pworaq.png"
+              alt="Contacto"
+            />
+            <h2>Contacto</h2>
+            <p>
+              <a
+                href="https://www.linkedin.com/in/vittorio-caiafa/"
+                target="_blank"
+                ><img
+                  class="social"
+                  style="border-radius: 50px; width: 40px; height: 40px"
+                  src="https://res.cloudinary.com/homedesigncloud/image/upload/v1743637441/4401412_fdlj7o.png"
+              /></a>
+              <a href="mailto:vittorio.caiafa@gmail.com" target="_blank"
+                ><img
+                  class="social"
+                  style="
+                    border-radius: 50px;
+                    width: 45px;
+                    height: 45px;
+                    transform: translateY(3px);
+                  "
+                  src="https://res.cloudinary.com/homedesigncloud/image/upload/v1743637400/mail-icon-with-long-shadow-black-on-white-background-simple-design-style-illustration-free-vector-removebg-preview_wyw9xg.png"
+              /></a>
+              <a href="https://github.com/vittorioCaiafa" target="_blank"
+                ><img
+                  class="social"
+                  style="border-radius: 50px; width: 40px; height: 40px"
+                  src="https://res.cloudinary.com/homedesigncloud/image/upload/v1743637442/25231_di4lsx.png"
+              /></a>
+            </p>
+          </div>
         </div>
       </div>
-      <div class="section right slide-left">
-        <img
-          id="titles"
-          src="https://res.cloudinary.com/homedesigncloud/image/upload/v1743626425/titlesimage_hpn4ld.webp"
-          alt="Imagen Difuminada"
-          class="blurred-image"
-        />
-      </div>
-    </div>
 
-    <div class="section-container">
-      <div class="section left slide-right">
-        <img
-          id="education"
-          src="https://res.cloudinary.com/homedesigncloud/image/upload/v1743626948/rama-1-780x445_pjuro3.jpg"
-          alt="Imagen Difuminada"
-          class="blurred-image"
-        />
-      </div>
-      <div class="section slide-left">
-        <div class="section-content">
-          <img
-            class="section-logo"
-            src="https://res.cloudinary.com/homedesigncloud/image/upload/v1743628805/symbole-de-l-education-livre-noir_mzxfbw.png"
-            alt="Educación"
-          />
-          <h2>Educación</h2>
-          <p><b>Colegio Inglés</b></p>
-          <p>Primaria y Secundaria</p>
-          <p><b>Universidad ORT Uruguay</b></p>
-          <p>Ingenieria en Sistemas</p>
-        </div>
-      </div>
+      <footer>
+        <p>&copy; 2025 Vittorio Caiafa. Todos los derechos reservados.</p>
+      </footer>
+      <script src="script.js"></script>
     </div>
-
-    <div class="section-container">
-      <div class="section slide-right">
-        <div class="section-content">
-          <img
-            class="section-logo"
-            src="https://res.cloudinary.com/homedesigncloud/image/upload/v1746451022/chat-removebg-preview_rr3h2a.png"
-            alt="Idiomas"
-          />
-          <h2>Idiomas</h2>
-          <p>Español - Nativo</p>
-          <p>Inglés - Avanzado (Cambridge First Certificate - B2)</p>
-          <p>Portugués - Intermedio (ULBRA Examen Intermediario - B1)</p>
-        </div>
-      </div>
-      <div class="section right slide-left">
-        <img
-          id="languages"
-          src="https://res.cloudinary.com/homedesigncloud/image/upload/v1746451482/file-20220421-11-2kndr3_hd11wj.avif"
-          alt="Imagen Difuminada"
-          class="blurred-image"
-        />
-      </div>
-    </div>
-
-    <div class="section-container">
-      <div class="section left slide-right">
-        <img
-          id="contact"
-          src="https://res.cloudinary.com/homedesigncloud/image/upload/v1743627269/contacto_pzitsc.jpg"
-          alt="Imagen Difuminada"
-          class="blurred-image"
-        />
-      </div>
-      <div class="section slide-left">
-        <div class="section-content">
-          <img
-            class="section-logo"
-            src="https://res.cloudinary.com/homedesigncloud/image/upload/v1743628679/png-transparent-man-people-person-user-users-eon-social-media-contact-info-icon-removebg-preview_pworaq.png"
-            alt="Contacto"
-          />
-          <h2>Contacto</h2>
-          <p>
-            <a
-              href="https://www.linkedin.com/in/vittorio-caiafa/"
-              target="_blank"
-              ><img
-                class="social"
-                style="border-radius: 50px; width: 40px; height: 40px"
-                src="https://res.cloudinary.com/homedesigncloud/image/upload/v1743637441/4401412_fdlj7o.png"
-            /></a>
-            <a href="mailto:vittorio.caiafa@gmail.com" target="_blank"
-              ><img
-                class="social"
-                style="
-                  border-radius: 50px;
-                  width: 45px;
-                  height: 45px;
-                  transform: translateY(3px);
-                "
-                src="https://res.cloudinary.com/homedesigncloud/image/upload/v1743637400/mail-icon-with-long-shadow-black-on-white-background-simple-design-style-illustration-free-vector-removebg-preview_wyw9xg.png"
-            /></a>
-            <a href="https://github.com/vittorioCaiafa" target="_blank"
-              ><img
-                class="social"
-                style="border-radius: 50px; width: 40px; height: 40px"
-                src="https://res.cloudinary.com/homedesigncloud/image/upload/v1743637442/25231_di4lsx.png"
-            /></a>
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <footer>
-      <p>&copy; 2025 Vittorio Caiafa. Todos los derechos reservados.</p>
-    </footer>
-    <script src="script.js"></script>
   </body>
 </html>

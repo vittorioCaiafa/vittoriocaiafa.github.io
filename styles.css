@@ -1,12 +1,26 @@
-/* styles.css */
+@font-face {
+  font-family: 'Sohne Breit';
+  src: url('fonts/soehne-breit.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Sohne Breit', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
-  color: #333;
+  background-color: #000000;
+  color: #ffffff;
   text-align: center;
+}
+
+.background-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: -1;
 }
 
 header {
@@ -16,7 +30,7 @@ header {
 }
 
 nav {
-  background: linear-gradient(to bottom, #808080, #f4f4f4);
+  background-color: none;
   padding: 10px;
 }
 
@@ -85,7 +99,7 @@ nav ul li a:hover {
   transform: translateX(0); /* La sección se mueve a su posición final */
 }
 
-.section img:not(.section-logo) {
+.section img:not(.section-icon) {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -105,7 +119,7 @@ nav ul li a:hover {
   object-fit: cover;
 }
 
-.section img.section-logo {
+.section img.section-icon {
   margin-bottom: -40px;
   opacity: 0.4;
   filter: brightness(0) invert(0.5);
@@ -168,7 +182,7 @@ footer {
   .section-container {
     height: 70vw;
   }
-  .section img.section-logo {
+  .section img.section-icon {
     margin-bottom: -25px;
     opacity: 0.4;
     filter: brightness(0) invert(0.5);
@@ -257,7 +271,7 @@ input:checked + .slider:before {
   color: #c1c1c1;
 }
 
-.dark-mode img.section-logo {
+.dark-mode img.section-icon {
   filter: invert(1);
 }
 
@@ -271,4 +285,17 @@ input:checked + .slider:before {
 
 .dark-mode h2 {
   color: white;
+}
+
+.image-row {
+  display: flex;
+  gap: 10px; /* espacio entre imágenes */
+  justify-content: center; /* centra las imágenes horizontalmente */
+  align-items: center; /* alinea verticalmente (opcional) */
+}
+
+.image-row img {
+  width: 150px; /* ancho fijo para cada imagen */
+  height: auto;
+  object-fit: cover; /* para que la imagen mantenga proporción */
 }
