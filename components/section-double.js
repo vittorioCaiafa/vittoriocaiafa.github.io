@@ -24,11 +24,9 @@ class SectionDouble extends HTMLElement {
   }
 
   render() {
-    const iconLeft = this.getAttribute("icon-left") || "";
     const titleLeft = this.getAttribute("title-left") || "";
     const descriptionLeft = this.getAttribute("description-left") || "";
 
-    const iconRight = this.getAttribute("icon-right") || "";
     const titleRight = this.getAttribute("title-right") || "";
     const descriptionRight = this.getAttribute("description-right") || "";
 
@@ -45,13 +43,14 @@ class SectionDouble extends HTMLElement {
 
     // Convert to <img> elements
     const imagesLeftHtml = imagesLeft
-      .map((src) => `<img src="${src}" style="width: 60px; margin: 5px;" />`)
+      .map((src) => `<img src="${src}" class="movement" style="width: 60px; margin: 5px;" />`)
       .join("");
     const imagesRightHtml = imagesRight
-      .map((src) => `<img src="${src}" style="width: 0px; margin: 5px;" />`)
+      .map((src) => `<img src="${src}" class="movement" style="width: 60px; margin: 5px;" />`)
       .join("");
 
     this.shadowRoot.innerHTML = `
+    <link rel="stylesheet" href="css/movement.css" />
       <style>
         :host {
           display: flex;
@@ -68,34 +67,31 @@ class SectionDouble extends HTMLElement {
           justify-content: center; /* centra verticalmente */
           gap: 20px;
           padding: 15px;
-          border-radius: 12px;
+          border-radius: 60px;
           box-shadow: 0 4px 10px rgba(0,0,0,0.05);
         }
 
         .box-left {
-            background: linear-gradient(135deg, #000000 0%, #0fff7f 300%);
+            background: linear-gradient(135deg,rgb(31, 31, 31, 0.1) 0%,rgb(0, 207, 255, 0.3) 200%);
         }
 
         .box-right {
-             background: linear-gradient(40deg, #1f1f1f 0%, #00cfff 300%);
-        }
-
-        .box img:first-child {
-          flex-shrink: 0;
-          border-radius: 12px;
-          object-fit: contain;
+             background: linear-gradient(135deg,rgb(31, 31, 31, 0.4) 0%,rgb(0, 207, 255, 0.6) 150%);
         }
   
         .text-content {
           display: flex;
           flex-direction: column;
           justify-content: center;
-          text-align: left;
+          text-align: center;
+          padding: 40px;
         }
   
         .text-content h2 {
           font-size: 32px;
           margin: 0;
+          margin-bottom: 30px;
+          color: rgb(255, 255, 255, 0.8);
         }
   
         .images-container {
@@ -103,12 +99,14 @@ class SectionDouble extends HTMLElement {
           flex-wrap: wrap;
           gap: 10px;
           margin-top: 10px;
+          justify-content: center; /* centra las imágenes horizontalmente */
         }
   
         .images-container img {
           width: 100px;
           height: auto;
           object-fit: contain;
+          padding: 5px;
         }
       </style>
   

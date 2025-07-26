@@ -3,18 +3,51 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portafolio</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="https://github.com/vittorioCaiafa/vittoriocaiafa.github.io/blob/main/styles.css" />
+    <title>Portafolio • VC</title>
+    <!-- CSS -->
+    <!-- CSS -> local -->
+    <link rel="stylesheet" href="css/background.css" />
+    <link rel="stylesheet" href="css/body.css" />
+    <link rel="stylesheet" href="css/section.css" />
+    <link rel="stylesheet" href="css/movement.css" />
+    <!-- CSS -> github -->
+    <link
+      rel="stylesheet"
+      href="https://raw.githubusercontent.com/vittorioCaiafa/vittoriocaiafa.github.io/main/css/background.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://raw.githubusercontent.com/vittorioCaiafa/vittoriocaiafa.github.io/main/css/body.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://raw.githubusercontent.com/vittorioCaiafa/vittoriocaiafa.github.io/main/css/footer.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://raw.githubusercontent.com/vittorioCaiafa/vittoriocaiafa.github.io/main/css/navbar.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://raw.githubusercontent.com/vittorioCaiafa/vittoriocaiafa.github.io/main/css/section.css"
+    />
+    <!-- COMPONENTS -->
     <script src="components/section-left.js" defer></script>
     <script src="components/section-right.js" defer></script>
     <script src="components/section-double.js" defer></script>
-    <script src="components/nav-bar.js" defer></script>
+    <script src="components/navbar.js" defer></script>
+    <script src="components/footer.js" defer></script>
   </head>
   <body>
-    <img src="assets/backgrounds/star-night.jpg" class="background-img" />
+    <!-- BACKGROUNDS -->
+    <div class="background-track">
+      <img src="assets/backgrounds/img1.jpg" class="bg-img" />
+      <img src="assets/backgrounds/img2.jpg" class="bg-img" />
+    </div>
+
+    <!-- PAGE CONTENT -->
     <div class="content">
-      <nav-bar></nav-bar>
+      <navbar-comp></navbar-comp>
       <div
         style="
           text-align: left;
@@ -48,34 +81,39 @@
             cursor: pointer;
           "
         >
-          Saber más
+          Saber más →
         </button>
       </div>
 
-      <section-left
-        icon="assets/icons/aboutme.png"
-        title="Sobre Mí"
-        description="Tengo 24 años. Soy Ingeniero en Sistemas graduado de la Universidad ORT Uruguay. Me gusta hacer ir a la playa, hacer deporte, cocinar y escuchar música."
-        image="https://res.cloudinary.com/homedesigncloud/image/upload/v1743624245/IMG_1008_gmckkn.jpg"
-      >
-      </section-left>
-
-      <div class="image-row" style="margin-bottom: 50px">
-        <img src="assets/icons/beach.png" />
-        <img src="assets/icons/gym.png" />
-        <img src="assets/icons/sushi.png" />
-        <img src="assets/icons/music.png" />
+      <div>
+        <section-left
+          icon="assets/resources/aboutme.png"
+          title="Sobre Mí"
+          description="Tengo 24 años. Soy Ingeniero en Sistemas graduado de la Universidad ORT Uruguay. Me gusta ir a la playa, hacer deporte, cocinar y escuchar música."
+          image="https://res.cloudinary.com/homedesigncloud/image/upload/v1743624245/IMG_1008_gmckkn.jpg"
+        >
+        </section-left>
+        <div class="image-row" style="margin-bottom: 50px">
+          <img class="movement" src="assets/resources/beach.png" />
+          <img class="movement" src="assets/resources/gym.png" />
+          <img class="movement" src="assets/resources/sushi.png" />
+          <img class="movement" src="assets/resources/music.png" />
+        </div>
       </div>
+
+      <div class="bottom-gap"></div>
 
       <section-double
         title-left="Lenguajes de programación"
-        description-left="assets/technologies/net.png, assets/technologies/angular.png, assets/technologies/c.png, assets/technologies/cs.png, assets/technologies/cpp.png, assets/technologies/css.png, assets/technologies/html.png, assets/technologies/java.png, assets/technologies/jest.png, assets/technologies/js.png, assets/technologies/nodejs.png, assets/technologies/py.png, assets/technologies/react.png, assets/technologies/ts.png"
+        description-left="assets/icons/prog-lang/net.png, assets/icons/prog-lang/angular.png, assets/icons/prog-lang/c.png, assets/icons/prog-lang/cs.png, assets/icons/prog-lang/cpp.png, assets/icons/prog-lang/css.png, assets/icons/prog-lang/html.png, assets/icons/prog-lang/java.png, assets/icons/prog-lang/js.png, assets/icons/prog-lang/nodejs.png, assets/icons/prog-lang/py.png, assets/icons/prog-lang/react.png, assets/icons/prog-lang/ts.png"
         title-right="Herramientas"
-        description-right=""
+        description-right="assets/icons/tools/aws.png, assets/icons/tools/azure.png, assets/icons/tools/docker.png, assets/icons/tools/figma.png, assets/icons/tools/mongo.png, assets/icons/tools/notion.png, assets/icons/tools/postgres.png, assets/icons/tools/postman.png, assets/icons/tools/ps.png, assets/icons/tools/selenium.png, assets/icons/tools/visualstudio.png, assets/icons/tools/vscode.png"
       ></section-double>
 
+      <div class="bottom-gap"></div>
+
       <section-left
-        icon="assets/icons/projects.png"
+        icon="assets/icons/prog-lang/projects.png"
         title="Projects"
         description="He desarrollado variedad de aplicaciones de todo tipo durante mi carrera, mi proyecto más reciente es la tesis HomeDesign; plataforma que renderiza muebles 3D a partir de fotografias de muebles reales."
         image="https://res.cloudinary.com/homedesigncloud/image/upload/v1743626856/curso-Herramientas-planificacion-seguimiento-control-proyectos-online-a-tu-ritmo_ejzr0y.webp"
@@ -83,7 +121,7 @@
       </section-left>
 
       <section-right
-        icon="assets/icons/experience.png"
+        icon="assets/icons/prog-lang/experience.png"
         title="Experiencia"
         description="Trabajo en SNP Group como Consultor de Transformacion. He estado colaborado como cutover de distintos proyectos en donde soy responsable de gestionar la migración de bases de datos de clientes a la plataforma."
         image="https://res.cloudinary.com/homedesigncloud/image/upload/v1743626739/persona-caminando-al-trabajo_cfwcqu.jpg"
@@ -237,9 +275,7 @@
         </div>
       </div>
 
-      <footer>
-        <p>&copy; 2025 Vittorio Caiafa. Todos los derechos reservados.</p>
-      </footer>
+      <footer></footer>
       <script src="script.js"></script>
     </div>
   </body>

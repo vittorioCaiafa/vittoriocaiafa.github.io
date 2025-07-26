@@ -6,7 +6,7 @@ class NavBar extends HTMLElement {
 
   connectedCallback() {
     this.shadowRoot.innerHTML = `
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="css/navbar.css" />
     <nav>
   <ul>
     <li>
@@ -38,4 +38,4 @@ class NavBar extends HTMLElement {
   }
 }
 
-customElements.define("nav-bar", NavBar);
+customElements.define("navbar-comp", NavBar);

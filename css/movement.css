@@ -1,0 +1,8 @@
+.movement {
+  display: inline-block; /* Necesario para que el transform funcione correctamente */
+  transition: transform 0.4s ease; /* Aplicamos transición constante */
+}
+
+.movement:hover {
+  transform: translateY(-4px);
+}

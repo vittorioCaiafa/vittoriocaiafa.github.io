@@ -33,9 +33,8 @@ class SectionLeft extends HTMLElement {
           margin-left: 200px;
           margin-right: 200px;
           padding: 30px;
-          border-radius: 16px;
-
-          background: linear-gradient(135deg, #f0f0f0 0%,rgb(165, 182, 220) 100%);
+          border-radius: 60px;
+          background: linear-gradient(135deg,rgb(10, 20, 41, 0.6) 0%,rgb(0, 5, 16, 0.8) 100%);
           box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
         }
 

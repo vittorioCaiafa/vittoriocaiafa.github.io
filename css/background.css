@@ -1,0 +1,13 @@
+.background-track {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+.bg-img {
+  width: 100%;
+  display: absolute;
+  height: auto;
+}
