@@ -8,9 +8,11 @@
     <!-- CSS -> local -->
     <link rel="stylesheet" href="css/background.css" />
     <link rel="stylesheet" href="css/body.css" />
-    <link rel="stylesheet" href="css/section.css" />
-    <link rel="stylesheet" href="css/movement.css" />
     <link rel="stylesheet" href="css/button.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/movement.css" />
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/section.css" />
     <!-- CSS -> github -->
     <link
       rel="stylesheet"
@@ -41,12 +43,14 @@
       href="https://raw.githubusercontent.com/vittorioCaiafa/vittoriocaiafa.github.io/main/css/button.css"
     />
     <!-- COMPONENTS -->
-    <script src="components/section-left.js" defer></script>
-    <script src="components/section-right.js" defer></script>
-    <script src="components/section-double.js" defer></script>
-    <script src="components/section-triple.js" defer></script>
-    <script src="components/navbar.js" defer></script>
-    <script src="components/footer.js" defer></script>
+    <section>
+      <script src="components/section-left.js" defer></script>
+      <script src="components/section-right.js" defer></script>
+      <script src="components/section-double.js" defer></script>
+      <script src="components/navbar.js" defer></script>
+      <script src="components/footer.js" defer></script>
+    </section>
+    <!-- SCRIPT -->
     <script src="script.js"></script>
   </head>
   <body>
@@ -54,6 +58,10 @@
     <!-- Background Video -->
     <video autoplay muted loop playsinline class="background-video">
       <source src="assets/backgrounds/bg.mp4" type="video/mp4" />
+      <source
+        src="https://raw.githubusercontent.com/vittorioCaiafa/vittoriocaiafa.github.io/main/assets/backgrounds/bg.mp4"
+        type="video/mp4"
+      />
       Your browser does not support the video tag.
     </video>
 
@@ -68,17 +76,18 @@
           margin-bottom: 150px;
         "
       >
-        <h1 style="font-size: 50px; font-weight: 900">
+        <h1 class="principal-title">
           Hola, soy<br /><span class="linear-gradient-sky-blue"
             >Vittorio Caiafa</span
           >
         </h1>
-        <button class="gradient-border-button movement">Saber más →</button>
+        <button class="gradient-border-button movement"><a href="#about">Saber más →</a></button>
       </div>
 
       <div class="bottom-gap"></div>
 
       <section-left
+        id="about"
         icon="assets/resources/aboutme.png"
         title="Sobre Mí"
         description="Tengo 24 años. Soy de Montevideo actualmente viviendo en Punta del Este. Me gusta viajar, el mar, hacer deporte, cocinar y escuchar música."
@@ -116,8 +125,8 @@
 
       <section-right
         icon="assets/resources/experience.png"
-        title="Experiencia"
-        description="Trabajo en SNP Group como Consultor de Transformacion en remoto para Chile. He estado colaborado como cutover junto a distintos equipos en diferentes proyectos en donde soy responsable de gestionar la migración de bases de datos de clientes a la plataforma de la empresa con SAP."
+        title="Experiencia laboral"
+        description="Trabajo en SNP Group como Consultor de Transformación remoto para Chile. Mi rol es principalmente de cutover, gestionando migraciones de bases de datos de clientes hacia plataformas SAP, en colaboración con distintos equipos."
         image="https://res.cloudinary.com/homedesigncloud/image/upload/v1743626739/persona-caminando-al-trabajo_cfwcqu.jpg"
       >
       </section-right>
@@ -128,7 +137,7 @@
       <section-left
         icon="assets/resources/certificate3.png"
         description="Ingeniero en sistemas
-        Universidad ORT Uruguay • 2025"
+        Universidad ORT Uruguay - 2025"
         icon-size="10%"
       ></section-left>
       <section-left
@@ -141,6 +150,22 @@
         icon="assets/resources/certificate1.png"
         description="Ayudante de ingeniero en sistemas
         Universidad ORT Uruguay - 2022"
+        icon-size="10%"
+      ></section-left>
+
+      <div class="bottom-gap"></div>
+
+      <h1 style="font-size: 50px; text-align: center">Idiomas</h1>
+      <section-left
+        icon="assets/resources/english-flag.png"
+        description="Inglés
+        Avanzado (Cambridge First Certificate - B2)"
+        icon-size="10%"
+      ></section-left>
+      <section-left
+        icon="assets/resources/brazil-flag.png"
+        description="Portugués
+        Intermedio (ULBRA Examen Intermediario - B1)"
         icon-size="10%"
       ></section-left>
 
@@ -165,78 +190,6 @@
             <p>Primaria y Secundaria</p>
             <p><b>Universidad ORT Uruguay</b></p>
             <p>Ingenieria en Sistemas</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="section-container">
-        <div class="section slide-right">
-          <div class="section-content">
-            <img
-              class="section-logo"
-              src="https://res.cloudinary.com/homedesigncloud/image/upload/v1746451022/chat-removebg-preview_rr3h2a.png"
-              alt="Idiomas"
-            />
-            <h2>Idiomas</h2>
-            <p>Español - Nativo</p>
-            <p>Inglés - Avanzado (Cambridge First Certificate - B2)</p>
-            <p>Portugués - Intermedio (ULBRA Examen Intermediario - B1)</p>
-          </div>
-        </div>
-        <div class="section right slide-left">
-          <img
-            id="languages"
-            src="https://res.cloudinary.com/homedesigncloud/image/upload/v1746451482/file-20220421-11-2kndr3_hd11wj.avif"
-            alt="Imagen Difuminada"
-            class="blurred-image"
-          />
-        </div>
-      </div>
-
-      <div class="section-container">
-        <div class="section left slide-right">
-          <img
-            id="contact"
-            src="https://res.cloudinary.com/homedesigncloud/image/upload/v1743627269/contacto_pzitsc.jpg"
-            alt="Imagen Difuminada"
-            class="blurred-image"
-          />
-        </div>
-        <div class="section slide-left">
-          <div class="section-content">
-            <img
-              class="section-logo"
-              src="https://res.cloudinary.com/homedesigncloud/image/upload/v1743628679/png-transparent-man-people-person-user-users-eon-social-media-contact-info-icon-removebg-preview_pworaq.png"
-              alt="Contacto"
-            />
-            <h2>Contacto</h2>
-            <p>
-              <a
-                href="https://www.linkedin.com/in/vittorio-caiafa/"
-                target="_blank"
-                ><img
-                  class="social"
-                  style="border-radius: 50px; width: 40px; height: 40px"
-                  src="https://res.cloudinary.com/homedesigncloud/image/upload/v1743637441/4401412_fdlj7o.png"
-              /></a>
-              <a href="mailto:vittorio.caiafa@gmail.com" target="_blank"
-                ><img
-                  class="social"
-                  style="
-                    border-radius: 50px;
-                    width: 45px;
-                    height: 45px;
-                    transform: translateY(3px);
-                  "
-                  src="https://res.cloudinary.com/homedesigncloud/image/upload/v1743637400/mail-icon-with-long-shadow-black-on-white-background-simple-design-style-illustration-free-vector-removebg-preview_wyw9xg.png"
-              /></a>
-              <a href="https://github.com/vittorioCaiafa" target="_blank"
-                ><img
-                  class="social"
-                  style="border-radius: 50px; width: 40px; height: 40px"
-                  src="https://res.cloudinary.com/homedesigncloud/image/upload/v1743637442/25231_di4lsx.png"
-              /></a>
-            </p>
           </div>
         </div>
       </div>

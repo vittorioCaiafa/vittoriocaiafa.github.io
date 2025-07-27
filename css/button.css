@@ -1,0 +1,29 @@
+button {
+  all: unset;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background: none;
+  cursor: pointer;
+}
+
+button a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.gradient-border-button {
+  color: white;
+  background: black;
+  padding: 10px 20px;
+  border-radius: 15px;
+  margin-top: -20px;
+  font-size: 20px;
+  cursor: pointer;
+
+  border: 2px solid transparent;
+  background-image: linear-gradient(black, black),
+    /* inner background */ linear-gradient(135deg, #28727b 0%, #27dddd 100%); /* border */
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}

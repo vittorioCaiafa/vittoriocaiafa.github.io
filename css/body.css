@@ -1,6 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Cal+Sans:wght@400;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;600&display=swap");
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Mulish", sans-serif;
   font-weight: lighter;
@@ -9,10 +13,14 @@ body {
   padding: 0;
   color: white;
   position: relative;
-  min-height: 100vh;
   overflow-x: hidden;
   background: black;
   font-size: 1.4em;
+}
+
+.principal-title {
+  font-size: 50px;
+  font-weight: 900;
 }
 
 h1 {
@@ -21,7 +29,12 @@ h1 {
 }
 
 h2 {
-  font-size: 15%;
+  transition: transform 0.4s ease, color 0.3s ease;
+}
+
+h2:hover {
+  color: #27dddd !important;
+  transition: 0.5s;
 }
 
 .linear-gradient-sky-blue {

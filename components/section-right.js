@@ -23,6 +23,7 @@ class SectionRight extends HTMLElement {
 
     this.shadowRoot.innerHTML = `
         <link rel="stylesheet" href="css/movement.css" />
+        <link rel="stylesheet" href="css/body.css" />
         <style>
           .section-container {
             display: flex;
@@ -111,8 +112,8 @@ class SectionRight extends HTMLElement {
               <div class="stat-label">Proyectos<br>realizados</div>
             </div>
             <div class="stat-item">
-              <div class="stat-number">+N</div>
-              <div class="stat-label">Descrip<br>cion</div>
+              <div class="stat-number">+30</div>
+              <div class="stat-label">Sesiones<br>coordinadas</div>
             </div>
           </div>
         </div>

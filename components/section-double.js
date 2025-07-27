@@ -51,6 +51,7 @@ class SectionDouble extends HTMLElement {
 
     this.shadowRoot.innerHTML = `
     <link rel="stylesheet" href="css/movement.css" />
+    <link rel="stylesheet" href="css/body.css" />
       <style>
         :host {
           display: flex;
