@@ -6,3 +6,26 @@
 .movement:hover {
   transform: translateY(-4px);
 }
+
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  min-height: 1px;
+  will-change: opacity, transform;
+  visibility: hidden;
+}
+
+/* Cuando entra en pantalla */
+.reveal-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+}
+
+/* Cuando sale de pantalla */
+.reveal-on-scroll.hidden {
+  opacity: 0;
+  transform: translateY(50px);
+  visibility: hidden;
+}

@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/body.css" />
     <link rel="stylesheet" href="css/section.css" />
     <link rel="stylesheet" href="css/movement.css" />
+    <link rel="stylesheet" href="css/button.css" />
     <!-- CSS -> github -->
     <link
       rel="stylesheet"
@@ -31,19 +32,30 @@
       rel="stylesheet"
       href="https://raw.githubusercontent.com/vittorioCaiafa/vittoriocaiafa.github.io/main/css/section.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://raw.githubusercontent.com/vittorioCaiafa/vittoriocaiafa.github.io/main/css/movement.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://raw.githubusercontent.com/vittorioCaiafa/vittoriocaiafa.github.io/main/css/button.css"
+    />
     <!-- COMPONENTS -->
     <script src="components/section-left.js" defer></script>
     <script src="components/section-right.js" defer></script>
     <script src="components/section-double.js" defer></script>
+    <script src="components/section-triple.js" defer></script>
     <script src="components/navbar.js" defer></script>
     <script src="components/footer.js" defer></script>
+    <script src="script.js"></script>
   </head>
   <body>
     <!-- BACKGROUNDS -->
-    <div class="background-track">
-      <img src="assets/backgrounds/img1.jpg" class="bg-img" />
-      <img src="assets/backgrounds/img2.jpg" class="bg-img" />
-    </div>
+    <!-- Background Video -->
+    <video autoplay muted loop playsinline class="background-video">
+      <source src="assets/backgrounds/bg.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
 
     <!-- PAGE CONTENT -->
     <div class="content">
@@ -52,60 +64,40 @@
         style="
           text-align: left;
           margin-left: 15%;
-          margin-top: 150px;
+          margin-top: 7%;
           margin-bottom: 150px;
         "
       >
-        <h1 style="font-size: 50px">
-          Hola 👋 soy<br />
-          <span
-            style="
-              background: linear-gradient(135deg, #3885c3 0%, #2b59a7 100%);
-              -webkit-background-clip: text;
-              -webkit-text-fill-color: transparent;
-              display: inline-block;
-            "
+        <h1 style="font-size: 50px; font-weight: 900">
+          Hola, soy<br /><span class="linear-gradient-sky-blue"
             >Vittorio Caiafa</span
           >
         </h1>
-        <button
-          style="
-            color: white;
-            background: linear-gradient(135deg, #3885c3 0%, #2b59a7 100%);
-            padding: 10px 20px;
-            border: none;
-            border-radius: 15px;
-            margin-top: -20px;
-            margin-bottom: 45%;
-            font-size: 20px;
-            cursor: pointer;
-          "
-        >
-          Saber más →
-        </button>
+        <button class="gradient-border-button movement">Saber más →</button>
       </div>
 
-      <div>
-        <section-left
-          icon="assets/resources/aboutme.png"
-          title="Sobre Mí"
-          description="Tengo 24 años. Soy Ingeniero en Sistemas graduado de la Universidad ORT Uruguay. Me gusta ir a la playa, hacer deporte, cocinar y escuchar música."
-          image="https://res.cloudinary.com/homedesigncloud/image/upload/v1743624245/IMG_1008_gmckkn.jpg"
-        >
-        </section-left>
-        <div class="image-row" style="margin-bottom: 50px">
-          <img class="movement" src="assets/resources/beach.png" />
-          <img class="movement" src="assets/resources/gym.png" />
-          <img class="movement" src="assets/resources/sushi.png" />
-          <img class="movement" src="assets/resources/music.png" />
-        </div>
+      <div class="bottom-gap"></div>
+
+      <section-left
+        icon="assets/resources/aboutme.png"
+        title="Sobre Mí"
+        description="Tengo 24 años. Soy de Montevideo actualmente viviendo en Punta del Este. Me gusta viajar, el mar, hacer deporte, cocinar y escuchar música."
+        image="https://res.cloudinary.com/homedesigncloud/image/upload/v1743624245/IMG_1008_gmckkn.jpg"
+      >
+      </section-left>
+      <div class="image-row" style="margin-bottom: 50px; margin-top: 3%">
+        <img class="movement" src="assets/resources/travel.png" />
+        <img class="movement" src="assets/resources/beach.png" />
+        <img class="movement" src="assets/resources/gym.png" />
+        <img class="movement" src="assets/resources/sushi.png" />
+        <img class="movement" src="assets/resources/music.png" />
       </div>
 
       <div class="bottom-gap"></div>
 
       <section-double
         title-left="Lenguajes de programación"
-        description-left="assets/icons/prog-lang/net.png, assets/icons/prog-lang/angular.png, assets/icons/prog-lang/c.png, assets/icons/prog-lang/cs.png, assets/icons/prog-lang/cpp.png, assets/icons/prog-lang/css.png, assets/icons/prog-lang/html.png, assets/icons/prog-lang/java.png, assets/icons/prog-lang/js.png, assets/icons/prog-lang/nodejs.png, assets/icons/prog-lang/py.png, assets/icons/prog-lang/react.png, assets/icons/prog-lang/ts.png"
+        description-left="assets/icons/prog-lang/net.png, assets/icons/prog-lang/angular.png, assets/icons/prog-lang/c.png, assets/icons/prog-lang/cs.png, assets/icons/prog-lang/cpp.png, assets/icons/prog-lang/css.png, assets/icons/prog-lang/html.png, assets/icons/prog-lang/js.png, assets/icons/prog-lang/nodejs.png, assets/icons/prog-lang/py.png, assets/icons/prog-lang/react.png, assets/icons/prog-lang/ts.png"
         title-right="Herramientas"
         description-right="assets/icons/tools/aws.png, assets/icons/tools/azure.png, assets/icons/tools/docker.png, assets/icons/tools/figma.png, assets/icons/tools/mongo.png, assets/icons/tools/notion.png, assets/icons/tools/postgres.png, assets/icons/tools/postman.png, assets/icons/tools/ps.png, assets/icons/tools/selenium.png, assets/icons/tools/visualstudio.png, assets/icons/tools/vscode.png"
       ></section-double>
@@ -113,70 +105,44 @@
       <div class="bottom-gap"></div>
 
       <section-left
-        icon="assets/icons/prog-lang/projects.png"
-        title="Projects"
-        description="He desarrollado variedad de aplicaciones de todo tipo durante mi carrera, mi proyecto más reciente es la tesis HomeDesign; plataforma que renderiza muebles 3D a partir de fotografias de muebles reales."
+        icon="assets/resources/projects.png"
+        title="Proyectos"
+        description="He desarrollado variedad de aplicaciones de todo tipo durante mi carrera, mi proyecto más reciente fue mi tesis, HomeDesign. Esta plataforma consistía en renderizar muebles 3D a partir de fotografias de muebles reales."
         image="https://res.cloudinary.com/homedesigncloud/image/upload/v1743626856/curso-Herramientas-planificacion-seguimiento-control-proyectos-online-a-tu-ritmo_ejzr0y.webp"
       >
       </section-left>
 
+      <div class="bottom-gap"></div>
+
       <section-right
-        icon="assets/icons/prog-lang/experience.png"
+        icon="assets/resources/experience.png"
         title="Experiencia"
-        description="Trabajo en SNP Group como Consultor de Transformacion. He estado colaborado como cutover de distintos proyectos en donde soy responsable de gestionar la migración de bases de datos de clientes a la plataforma."
+        description="Trabajo en SNP Group como Consultor de Transformacion en remoto para Chile. He estado colaborado como cutover junto a distintos equipos en diferentes proyectos en donde soy responsable de gestionar la migración de bases de datos de clientes a la plataforma de la empresa con SAP."
         image="https://res.cloudinary.com/homedesigncloud/image/upload/v1743626739/persona-caminando-al-trabajo_cfwcqu.jpg"
       >
       </section-right>
 
-      <div class="section-container">
-        <div class="section left slide-right">
-          <img
-            id="work-experience"
-            src="https://res.cloudinary.com/homedesigncloud/image/upload/v1743626739/persona-caminando-al-trabajo_cfwcqu.jpg"
-            alt="Imagen Difuminada"
-            class="blurred-image"
-          />
-        </div>
-        <div class="section slide-left">
-          <div class="section-content">
-            <img
-              class="section-logo"
-              src="https://res.cloudinary.com/homedesigncloud/image/upload/v1743628971/278f0324b4a523452b7c44b38177d2f3-corbata-silueta-ropa_d0x8ov.png"
-              alt="Experiencia Laboral"
-            />
-            <h2>Experiencia Laboral</h2>
-            <p>
-              Trabajo en SNP Group como Cutover, donde soy responsable de
-              gestionar la migración de bases de datos de clientes a la
-              plataforma.
-            </p>
-          </div>
-        </div>
-      </div>
+      <div class="bottom-gap"></div>
 
-      <div class="section-container">
-        <div class="section slide-right">
-          <div class="section-content">
-            <img
-              class="section-logo"
-              src="https://res.cloudinary.com/homedesigncloud/image/upload/v1743621971/graduation-cap-icon-graduation-icons-4f75da_qnregj.webp"
-              alt="Títulos"
-            />
-            <h2>Títulos</h2>
-            <p>Ingeniero en Sistemas</p>
-            <p>Ayudante de Ingeniero en Sistemas</p>
-            <p>Licenciado en Ingeniería de Software</p>
-          </div>
-        </div>
-        <div class="section right slide-left">
-          <img
-            id="titles"
-            src="https://res.cloudinary.com/homedesigncloud/image/upload/v1743626425/titlesimage_hpn4ld.webp"
-            alt="Imagen Difuminada"
-            class="blurred-image"
-          />
-        </div>
-      </div>
+      <h1 style="font-size: 50px; text-align: center">Títulos</h1>
+      <section-left
+        icon="assets/resources/certificate3.png"
+        description="Ingeniero en sistemas
+        Universidad ORT Uruguay • 2025"
+        icon-size="10%"
+      ></section-left>
+      <section-left
+        icon="assets/resources/certificate2.png"
+        description="Licenciado en ingenieria de software
+        Universidad ORT Uruguay - 2024"
+        icon-size="10%"
+      ></section-left>
+      <section-left
+        icon="assets/resources/certificate1.png"
+        description="Ayudante de ingeniero en sistemas
+        Universidad ORT Uruguay - 2022"
+        icon-size="10%"
+      ></section-left>
 
       <div class="section-container">
         <div class="section left slide-right">
@@ -276,7 +242,6 @@
       </div>
 
       <footer></footer>
-      <script src="script.js"></script>
     </div>
   </body>
 </html>

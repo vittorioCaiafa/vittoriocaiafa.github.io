@@ -55,8 +55,7 @@ class SectionDouble extends HTMLElement {
         :host {
           display: flex;
           gap: 20px;
-          margin: 200px;
-          margin-top: 50px;
+          margin: 15%;
         }
   
         .box {
@@ -65,18 +64,17 @@ class SectionDouble extends HTMLElement {
           align-items: center;
           flex-direction: column; /* apilado vertical */
           justify-content: center; /* centra verticalmente */
-          gap: 20px;
-          padding: 15px;
+          gap: 10%;
           border-radius: 60px;
           box-shadow: 0 4px 10px rgba(0,0,0,0.05);
         }
 
         .box-left {
-            background: linear-gradient(135deg,rgb(31, 31, 31, 0.1) 0%,rgb(0, 207, 255, 0.3) 200%);
+            background: linear-gradient(135deg,rgb(31, 31, 31, 0.1) 0%,rgb(0, 207, 255, 0.2) 200%);
         }
 
         .box-right {
-             background: linear-gradient(135deg,rgb(31, 31, 31, 0.4) 0%,rgb(0, 207, 255, 0.6) 150%);
+             background: linear-gradient(135deg,rgb(31, 31, 31, 0.3) 0%,rgb(0, 207, 255, 0.4) 150%);
         }
   
         .text-content {
@@ -91,7 +89,7 @@ class SectionDouble extends HTMLElement {
           font-size: 32px;
           margin: 0;
           margin-bottom: 30px;
-          color: rgb(255, 255, 255, 0.8);
+          color: rgb(255, 255, 255);
         }
   
         .images-container {
@@ -103,7 +101,7 @@ class SectionDouble extends HTMLElement {
         }
   
         .images-container img {
-          width: 100px;
+          width: 10%px;
           height: auto;
           object-fit: contain;
           padding: 5px;

@@ -43,7 +43,7 @@
   color: white;
   text-align: center;
   width: 80%;
-  font-size: 1.5rem;
+  font-size: 1%;
   z-index: 1;
 }
 
@@ -69,13 +69,13 @@
 
 .image-row {
   display: flex;
-  gap: 10px; /* espacio entre imágenes */
-  justify-content: center; /* centra las imágenes horizontalmente */
-  align-items: center; /* alinea verticalmente (opcional) */
+  gap: 10px; 
+  justify-content: center; 
+  align-items: center; 
 }
 
 .image-row img {
-  width: 150px; /* ancho fijo para cada imagen */
+  width: 150px; 
   height: auto;
-  object-fit: cover; /* para que la imagen mantenga proporción */
+  object-fit: cover; 
 }

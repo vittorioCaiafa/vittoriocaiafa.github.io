@@ -1,6 +1,6 @@
 class SectionLeft extends HTMLElement {
   static get observedAttributes() {
-    return ["icon", "title", "description", "image"];
+    return ["icon", "title", "description", "image", "icon-size"];
   }
 
   constructor() {
@@ -20,21 +20,22 @@ class SectionLeft extends HTMLElement {
     const icon = this.getAttribute("icon") || "";
     const title = this.getAttribute("title") || "";
     const description = this.getAttribute("description") || "";
+    const iconSize = this.getAttribute("icon-size") || "20%";
 
     this.shadowRoot.innerHTML = `
+    <link rel="stylesheet" href="css/movement.css" />
       <style>
         .section-container {
           display: flex;
           flex-direction: row;
           align-items: center;
           justify-content: space-between;
-          margin-top: 50px;
-          margin-bottom: 50px;
-          margin-left: 200px;
-          margin-right: 200px;
+          margin-left: 15%;
+          margin-right: 15%;
+          margin-bottom: 1%;
           padding: 30px;
           border-radius: 60px;
-          background: linear-gradient(135deg,rgb(10, 20, 41, 0.6) 0%,rgb(0, 5, 16, 0.8) 100%);
+          background: linear-gradient(135deg,rgb(10, 29, 41, 0.6) 0%,rgb(0, 12, 16, 0.3) 100%);
           box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
         }
 
@@ -46,8 +47,7 @@ class SectionLeft extends HTMLElement {
         }
 
         .section-icon {
-          width: 200px;
-          height: 200px;
+          width: ${iconSize};
           flex-shrink: 0;
         }
 
@@ -59,12 +59,10 @@ class SectionLeft extends HTMLElement {
         }
 
         .text-content h2 {
-          font-size: 50px;
           margin: 0;
         }
 
         .text-content p {
-          font-size: 25px;
           margin-top: 8px;
           white-space: pre-line;
         }
@@ -72,7 +70,7 @@ class SectionLeft extends HTMLElement {
 
       <div class="section-container">
         <div class="section-left-content">
-          <img class="section-icon" src="${icon}" />
+          <img class="section-icon movement" src="${icon}" />
           <div class="text-content">
             <h2>${title}</h2>
             <p>${description}</p>
