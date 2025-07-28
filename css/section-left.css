@@ -38,3 +38,26 @@
   margin-top: 8px;
   white-space: pre-line;
 }
+
+.fading-border {
+    position: relative;
+    padding: 40px;
+    border-radius: 20px;
+  
+    /* Aplica un degradado como máscara desde el centro hacia los bordes */
+    -webkit-mask-image: radial-gradient(
+      ellipse at center,
+      rgba(0, 0, 0, 1) 80%,
+      rgba(0, 0, 0, 0) 100%
+    );
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+  
+    mask-image: radial-gradient(
+      ellipse at center,
+      rgba(0, 0, 0, 1) 80%,
+      rgba(0, 0, 0, 0) 100%
+    );
+    mask-repeat: no-repeat;
+    mask-size: 100% 100%;
+  }

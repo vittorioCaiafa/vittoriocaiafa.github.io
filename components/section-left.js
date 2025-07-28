@@ -32,7 +32,7 @@ class SectionLeft extends HTMLElement {
           flex-shrink: 0;
         }
       </style>
-      <div class="section-container">
+      <div class="section-container fading-border">
         <div class="section-left-content">
           <img class="section-icon movement" src="${icon}" />
           <div class="text-content">
