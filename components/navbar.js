@@ -7,6 +7,7 @@ class NavBar extends HTMLElement {
   connectedCallback() {
     this.shadowRoot.innerHTML = `
         <link rel="stylesheet" href="css/navbar.css" />
+        <link rel="stylesheet" href="css/button.css" />
         <nav>
       <ul>
         <li>
@@ -28,11 +29,12 @@ class NavBar extends HTMLElement {
           <a href="#education">Educación</a>
         </li>
         <li>
-          <a href="#languages">Lenguajes</a>
+          <a href="#languages">Idiomas</a>
         </li>
         <li>
-          <a href="#contact">Contacto</a>
-        </li>
+          <a href="#contact">
+          <button style="font-size: 0.6rem; padding: 0.4rem;" class="gradient-border-button">Contacto →</button></a>
+        </li> 
       </ul>
     </nav>`;
   }

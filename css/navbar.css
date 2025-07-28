@@ -12,7 +12,7 @@ nav ul {
   flex-wrap: wrap;
   justify-content: center;
   gap: 2vw;
-  font-size: 0.9vw;
+  font-size: 0.6rem;
 }
 
 nav ul li a {
