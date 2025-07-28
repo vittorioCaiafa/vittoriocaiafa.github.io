@@ -48,3 +48,10 @@ h2:hover {
 .bottom-gap {
   margin-bottom: 25%;
 }
+
+.intro {
+  text-align: left;
+  margin-left: 15%;
+  margin-top: 10%;
+  margin-bottom: 150px;
+}

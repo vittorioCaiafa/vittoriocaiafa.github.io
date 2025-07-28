@@ -1,35 +1,41 @@
 .typing-container {
-  font-size: 2rem;
-  font-family: monospace;
-  color: white;
-  display: flex;
-  align-items: center;
-}
-
-.static-text {
-  white-space: nowrap;
-}
-
-.typing-text {
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 0.15em solid transparent;
-}
-
-.cursor {
-  width: 10px;
-  height: 1.2em;
-  background-color: #27ffff;
-  margin-left: 2px;
-  animation: blink 0.7s infinite;
-}
-
-@keyframes blink {
-  0%,
-  100% {
-    opacity: 1;
+    font-size: 2.5rem;
+    font-family: monospace;
+    color: white;
+    display: flex;
+    flex-direction: column; /* Cambia la dirección a vertical */
+    align-items: flex-start; /* Alinea a la izquierda */
   }
-  50% {
-    opacity: 0;
+  
+  .static-line, .typing-line {
+    display: flex;
+    align-items: center;
   }
-}
+  
+  /* Tus estilos originales se mantienen igual a partir de aquí */
+  .static-text,
+  .typing-text {
+    white-space: nowrap;
+  }
+  
+  .typing-text {
+    color: #27ffff;
+  }
+  
+  .cursor {
+    width: 10px;
+    height: 1.5em;
+    background-color: #27ffff;
+    margin-left: 5px;
+    animation: blink 0.7s infinite;
+  }
+  
+  @keyframes blink {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  }

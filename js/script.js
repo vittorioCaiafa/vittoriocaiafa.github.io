@@ -1,58 +1,14 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Seteo de secciones
-  const about = window.constants.aboutme;
-  const skills = window.constants.skills;
-
-  const sectionAbout = document.getElementById("section-aboutme");
-  sectionAbout.setAttribute("icon", about.icon);
-  sectionAbout.setAttribute("title", about.title);
-  sectionAbout.setAttribute("description", about.description);
-  sectionAbout.setAttribute("image", about.image);
-
-  const sectionSkills = document.getElementById("section-skills");
-  sectionSkills.setAttribute("icon", skills.image);
-  sectionSkills.setAttribute("title", skills.title);
-  sectionSkills.setAttribute("description", skills.description);
-  sectionSkills.setAttribute("image", skills.image);
-
-  // Reveal on scroll
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        const el = entry.target;
-        if (entry.isIntersecting) {
-          el.classList.add("visible");
-          el.classList.remove("hidden");
-        } else {
-          el.classList.remove("visible");
-          el.classList.add("hidden");
-        }
-      });
-    },
-    { threshold: 0.1 }
-  );
-
-  document.querySelectorAll(".reveal-on-scroll").forEach((el) => {
-    el.classList.add("hidden");
-    observer.observe(el);
-  });
-
   // Typing effect
   const words = [
     "Vittorio Caiafa",
-    "Ingeniero en sistemas",
-    "Desarrollador",
+    "Ingeniero en Sistemas",
+    "Desarrollador FullStack",
     "Apasionado por la tecnología",
-    "Tu próximo fichaje",
   ];
 
   const typingText = document.querySelector(".typing-text");
   const cursor = document.querySelector(".cursor");
-
-  if (!typingText) {
-    console.error("No se encontró .typing-text en el DOM");
-    return;
-  }
 
   let wordIndex = 0;
   let charIndex = 0;
@@ -60,27 +16,39 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const typeSpeed = 100;
   const deleteSpeed = 50;
-  const waitTime = 1500;
+  const waitTime = 2000;
 
   function type() {
     const currentWord = words[wordIndex];
-    typingText.textContent = currentWord.substring(0, charIndex);
+    const visibleText = currentWord.substring(0, charIndex);
+    typingText.textContent = visibleText;
+  
+    // Mueve el cursor al final del texto
+    cursor.style.left = `${typingText.offsetWidth}px`;
 
     if (!isDeleting) {
-      if (charIndex < currentWord.length) {
-        charIndex++;
+      // Typing forward
+      typingText.textContent = currentWord.substring(0, charIndex + 1);
+      charIndex++;
+
+      if (charIndex <= currentWord.length) {
         setTimeout(type, typeSpeed);
       } else {
+        // Pause before deleting
         setTimeout(() => {
           isDeleting = true;
-          setTimeout(type, deleteSpeed);
+          type();
         }, waitTime);
       }
     } else {
+      // Deleting backward
+      typingText.textContent = currentWord.substring(0, charIndex - 1);
+      charIndex--;
+
       if (charIndex > 0) {
-        charIndex--;
         setTimeout(type, deleteSpeed);
       } else {
+        // Move to next word
         isDeleting = false;
         wordIndex = (wordIndex + 1) % words.length;
         setTimeout(type, typeSpeed);
@@ -88,5 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  type(); // Iniciar el efecto
+  // Start typing effect immediately (empty at first)
+  typingText.textContent = "";
+  setTimeout(type, 500); // Small delay before starting
 });

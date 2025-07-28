@@ -56,7 +56,7 @@
       <script src="components/navbar.js" defer></script>
     </section>
     <!-- SCRIPT -->
-    <script src="script.js"></script>
+    <script src="js/script.js" defer></script>
   </head>
   <body>
     <!-- BACKGROUNDS -->
@@ -73,20 +73,19 @@
     <!-- PAGE CONTENT -->
     <div class="content">
       <navbar-comp></navbar-comp>
-      <div
-        style="
-          text-align: left;
-          margin-left: 15%;
-          margin-top: 7%;
-          margin-bottom: 150px;
-        "
-      >
+      <div class="intro">
         <h1 class="principal-title">
           <div class="typing-container">
-            <span class="static-text">Hola, soy&nbsp;</span>
-            <span class="typing-text"></span><span class="cursor"></span>
+            <div class="static-line">
+              <span class="static-text">Hola, soy</span>
+            </div>
+            <div class="typing-line">
+              <span class="typing-text"></span>
+              <span class="cursor"></span>
+            </div>
           </div>
         </h1>
+
         <button class="gradient-border-button movement">
           <a href="#about">Saber más →</a>
         </button>
