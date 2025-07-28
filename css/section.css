@@ -69,13 +69,13 @@
 
 .image-row {
   display: flex;
-  gap: 10px; 
-  justify-content: center; 
-  align-items: center; 
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
 }
 
 .image-row img {
-  width: 150px; 
+  width: 150px;
   height: auto;
-  object-fit: cover; 
+  object-fit: cover;
 }

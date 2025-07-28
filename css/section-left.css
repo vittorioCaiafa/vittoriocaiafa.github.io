@@ -1,0 +1,40 @@
+.section-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-bottom: 1%;
+  padding: 30px;
+  border-radius: 60px;
+  background: linear-gradient(
+    135deg,
+    rgba(10, 29, 41, 0.6) 0%,
+    rgba(0, 12, 16, 0.3) 100%
+  );
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.section-left-content {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  gap: 20px;
+}
+
+.text-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+
+.text-content h2 {
+  margin: 0;
+}
+
+.text-content p {
+  margin-top: 8px;
+  white-space: pre-line;
+}
