@@ -1,0 +1,35 @@
+.typing-container {
+  font-size: 2rem;
+  font-family: monospace;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.static-text {
+  white-space: nowrap;
+}
+
+.typing-text {
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 0.15em solid transparent;
+}
+
+.cursor {
+  width: 10px;
+  height: 1.2em;
+  background-color: #27ffff;
+  margin-left: 2px;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}

@@ -57,5 +57,10 @@
   width: 60px;
   height: auto;
   object-fit: contain;
-  padding: 5px;
+  filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.6));
+  transition: 1s ease;
+}
+
+.images-container img:hover {
+  filter: drop-shadow(0 0 12px rgba(255, 255, 255, 1.5));
 }

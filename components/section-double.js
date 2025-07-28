@@ -38,6 +38,8 @@ class SectionDouble extends HTMLElement {
 
     this.shadowRoot.innerHTML = `
       <link rel="stylesheet" href="css/section-double.css" />
+      <link rel="stylesheet" href="css/movement.css" />
+      <link rel="stylesheet" href="css/body.css" />
       <div class="box box-left">
         <div class="text-content">
           <h2>${titleLeft}</h2>

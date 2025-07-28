@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="css/navbar.css" />
     <link rel="stylesheet" href="css/section.css" />
     <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/title.css" />
     <!-- CSS -> github -->
     <link
       rel="stylesheet"
@@ -41,6 +42,10 @@
     <link
       rel="stylesheet"
       href="https://raw.githubusercontent.com/vittorioCaiafa/vittoriocaiafa.github.io/main/css/button.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://raw.githubusercontent.com/vittorioCaiafa/vittoriocaiafa.github.io/main/css/title.css"
     />
     <!-- COMPONENTS -->
     <section>
@@ -77,11 +82,14 @@
         "
       >
         <h1 class="principal-title">
-          Hola, soy<br /><span class="linear-gradient-sky-blue"
-            >Vittorio Caiafa</span
-          >
+          <div class="typing-container">
+            <span class="static-text">Hola, soy&nbsp;</span>
+            <span class="typing-text"></span><span class="cursor"></span>
+          </div>
         </h1>
-        <button class="gradient-border-button movement"><a href="#about">Saber más →</a></button>
+        <button class="gradient-border-button movement">
+          <a href="#about">Saber más →</a>
+        </button>
       </div>
 
       <div class="bottom-gap"></div>
@@ -106,7 +114,7 @@
 
       <section-double
         title-left="Lenguajes de programación"
-        description-left="assets/icons/prog-lang/net.png, assets/icons/prog-lang/angular.png, assets/icons/prog-lang/c.png, assets/icons/prog-lang/cs.png, assets/icons/prog-lang/cpp.png, assets/icons/prog-lang/css.png, assets/icons/prog-lang/html.png, assets/icons/prog-lang/js.png, assets/icons/prog-lang/nodejs.png, assets/icons/prog-lang/py.png, assets/icons/prog-lang/react.png, assets/icons/prog-lang/ts.png"
+        description-left="assets/icons/prog-lang/net.png, assets/icons/prog-lang/angular.png, assets/icons/prog-lang/cs.png, assets/icons/prog-lang/cpp.png, assets/icons/prog-lang/css.png, assets/icons/prog-lang/html.png, assets/icons/prog-lang/java.png, assets/icons/prog-lang/js.png, assets/icons/prog-lang/nodejs.png, assets/icons/prog-lang/py.png, assets/icons/prog-lang/react.png, assets/icons/prog-lang/sql.png, assets/icons/prog-lang/ts.png"
         title-right="Herramientas"
         description-right="assets/icons/tools/aws.png, assets/icons/tools/azure.png, assets/icons/tools/docker.png, assets/icons/tools/figma.png, assets/icons/tools/mongo.png, assets/icons/tools/notion.png, assets/icons/tools/postgres.png, assets/icons/tools/postman.png, assets/icons/tools/ps.png, assets/icons/tools/selenium.png, assets/icons/tools/visualstudio.png, assets/icons/tools/vscode.png"
       ></section-double>
@@ -168,6 +176,8 @@
         Intermedio (ULBRA Examen Intermediario - B1)"
         icon-size="10%"
       ></section-left>
+
+      <div class="bottom-gap"></div>
 
       <footer-comp></footer-comp>
     </div>

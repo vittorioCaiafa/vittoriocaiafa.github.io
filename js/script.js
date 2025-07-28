@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
+  // Seteo de secciones
   const about = window.constants.aboutme;
   const skills = window.constants.skills;
 
@@ -13,9 +14,8 @@ document.addEventListener("DOMContentLoaded", () => {
   sectionSkills.setAttribute("title", skills.title);
   sectionSkills.setAttribute("description", skills.description);
   sectionSkills.setAttribute("image", skills.image);
-});
 
-document.addEventListener("DOMContentLoaded", () => {
+  // Reveal on scroll
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
@@ -29,11 +29,64 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       });
     },
-    { threshold: 0.1 } // Se activa cuando el 10% del elemento es visible
+    { threshold: 0.1 }
   );
 
   document.querySelectorAll(".reveal-on-scroll").forEach((el) => {
-    el.classList.add("hidden"); // forzar estado oculto inicial
+    el.classList.add("hidden");
     observer.observe(el);
   });
+
+  // Typing effect
+  const words = [
+    "Vittorio Caiafa",
+    "Ingeniero en sistemas",
+    "Desarrollador",
+    "Apasionado por la tecnología",
+    "Tu próximo fichaje",
+  ];
+
+  const typingText = document.querySelector(".typing-text");
+  const cursor = document.querySelector(".cursor");
+
+  if (!typingText) {
+    console.error("No se encontró .typing-text en el DOM");
+    return;
+  }
+
+  let wordIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+
+  const typeSpeed = 100;
+  const deleteSpeed = 50;
+  const waitTime = 1500;
+
+  function type() {
+    const currentWord = words[wordIndex];
+    typingText.textContent = currentWord.substring(0, charIndex);
+
+    if (!isDeleting) {
+      if (charIndex < currentWord.length) {
+        charIndex++;
+        setTimeout(type, typeSpeed);
+      } else {
+        setTimeout(() => {
+          isDeleting = true;
+          setTimeout(type, deleteSpeed);
+        }, waitTime);
+      }
+    } else {
+      if (charIndex > 0) {
+        charIndex--;
+        setTimeout(type, deleteSpeed);
+      } else {
+        isDeleting = false;
+        wordIndex = (wordIndex + 1) % words.length;
+        setTimeout(type, typeSpeed);
+      }
+    }
+  }
+
+  type(); // Iniciar el efecto
 });

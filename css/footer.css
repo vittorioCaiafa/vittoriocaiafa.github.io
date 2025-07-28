@@ -4,6 +4,7 @@ footer {
   padding: 20px 0;
   position: relative;
   font-family: sans-serif;
+  margin-top: 15%;
 }
 
 .footer-content {
@@ -42,14 +43,13 @@ footer {
 /* Estilo de los íconos */
 .social-icons img {
   filter: brightness(0.5);
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
   transition: transform 0.4s ease, filter 0.3s ease;
 }
 
 .social-icons img:hover {
-  filter: invert(76%) sepia(48%) saturate(1460%) hue-rotate(135deg) brightness(200%) contrast(102%);
-  transform: scale(1.1);
+  filter: brightness(90%);
 }
 
 
