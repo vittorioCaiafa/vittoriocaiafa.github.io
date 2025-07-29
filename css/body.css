@@ -68,3 +68,11 @@ h2:hover {
   height: auto;
   object-fit: cover;
 }
+
+.side-by-side-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
