@@ -7,6 +7,7 @@ class LanguageSection extends HTMLElement {
   connectedCallback() {
     this.shadowRoot.innerHTML = `
     <link rel="stylesheet" href="css/body.css" />
+    <script src="js/script.js"></script>
       <section id="languages">
         <h1 style="font-size: 50px; text-align: center">Idiomas</h1>
         <div class="side-by-side-section">
