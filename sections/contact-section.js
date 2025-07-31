@@ -52,13 +52,10 @@ class ContactSection extends HTMLElement {
 
       if (hasError) return;
 
-      // Crear el mailto
-      // Crear el mailto
       const subject = encodeURIComponent("💼 Nuevo mensaje desde el portfolio");
       const body = encodeURIComponent(`${message}`);
       const mailtoLink = `mailto:vittorio.caiafa@gmail.com?subject=${subject}&body=${body}`;
 
-      // Crear <a> temporal
       const a = document.createElement("a");
       a.href = mailtoLink;
       a.target = "_blank";
