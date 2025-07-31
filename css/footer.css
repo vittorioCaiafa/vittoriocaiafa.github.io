@@ -5,6 +5,7 @@ footer {
   position: relative;
   font-family: sans-serif;
   margin-top: 15%;
+  bottom: 0;
 }
 
 .footer-content {

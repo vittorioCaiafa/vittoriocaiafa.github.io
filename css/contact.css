@@ -1,0 +1,138 @@
+.contact-section {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  min-height: 30%;
+  padding: 30px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Segoe UI", sans-serif;
+  color: white;
+  text-align: center;
+  background: url("../assets/backgrounds/blue-blurry-lights.avif") no-repeat
+    center center;
+  background-size: cover;
+}
+
+.contact-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(8px);
+  z-index: 0;
+}
+
+.contact-section h2 {
+  font-size: 42px;
+  margin-bottom: 20px;
+  z-index: 1;
+}
+
+.contact-section p {
+  font-size: 18px;
+  margin: 5px 0;
+  z-index: 1;
+}
+
+.inputs-row {
+  display: flex;
+  justify-content: center;
+  gap: 5%;
+  margin-top: 30px;
+  width: 100%;
+  max-width: 800px;
+  z-index: 1;
+}
+
+.inputs-row input {
+  flex: 1;
+  padding: 15px;
+  width: 300px;
+  border-radius: 12px;
+  border: none;
+  font-size: 16px;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #333;
+  outline: none;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.message-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  width: 100%;
+  max-width: 800px;
+  z-index: 1;
+}
+
+.message-container textarea {
+  flex: 3;
+  width: 565px;
+  resize: none;
+  padding: 20px;
+  border-radius: 12px 0 0 12px;
+  border: none;
+  font-size: 16px;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #333;
+  outline: none;
+  margin-bottom: 5%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.message-container button {
+  border-radius: 0 12px 12px 0;
+  background-color: #000;
+  height: 81px;
+  padding: 0 24px;
+  font-size: 16px;
+  border: 1px solid #fff;
+  cursor: pointer;
+  color: white;
+}
+
+input.error,
+textarea.error {
+  border: 2px solid red;
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  text-align: left;
+  margin: 5px 0 0 5px;
+}
+
+@media (max-width: 600px) {
+  .inputs-row {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .inputs-row input {
+    width: 100%;
+  }
+
+  .message-container {
+    flex-direction: column;
+  }
+
+  .message-container textarea,
+  .message-container button {
+    border-radius: 12px;
+    width: 100%;
+  }
+
+  .message-container button {
+    margin-top: 15px;
+    padding: 12px 0;
+  }
+}

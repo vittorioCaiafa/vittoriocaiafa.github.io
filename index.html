@@ -11,9 +11,9 @@
     <link rel="stylesheet" href="css/button.css" />
     <link rel="stylesheet" href="css/movement.css" />
     <link rel="stylesheet" href="css/navbar.css" />
-    <link rel="stylesheet" href="css/section.css" />
     <link rel="stylesheet" href="css/footer.css" />
     <link rel="stylesheet" href="css/title.css" />
+    <link rel="stylesheet" href="css/contact.css" />
     <!-- CSS -> github -->
     <link
       rel="stylesheet"
@@ -47,14 +47,19 @@
       rel="stylesheet"
       href="https://raw.githubusercontent.com/vittorioCaiafa/vittoriocaiafa.github.io/main/css/title.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://raw.githubusercontent.com/vittorioCaiafa/vittoriocaiafa.github.io/main/css/contact.css"
+    />
+    <!-- SECTIONS -->
+    <script src="sections/language-section.js" defer></script>
+    <script src="sections/contact-section.js" defer></script>
     <!-- COMPONENTS -->
-    <section>
-      <script src="components/section-left.js" defer></script>
-      <script src="components/section-right.js" defer></script>
-      <script src="components/section-double.js" defer></script>
-      <script src="components/footer.js" defer></script>
-      <script src="components/navbar.js" defer></script>
-    </section>
+    <script src="components/section-left.js" defer></script>
+    <script src="components/section-right.js" defer></script>
+    <script src="components/section-double.js" defer></script>
+    <script src="components/footer.js" defer></script>
+    <script src="components/navbar.js" defer></script>
     <!-- SCRIPT -->
     <script src="js/script.js" defer></script>
   </head>
@@ -74,142 +79,137 @@
     <div class="content">
       <navbar-comp></navbar-comp>
 
-      <img
-        src="assets/images/princippp.png"
-        class="movement"
-        style="width: 40%; height: auto; margin-top: 5%; margin-left: 50%; position: absolute; top: 0; left: 0; z-index: -1"
-      />
+      <section>
+        <!--<img
+          src="assets/images/me.png"
+          class="movement"
+          style="
+            width: 40%;
+            height: auto;
+            margin-top: 5%;
+            margin-left: 50%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+          "
+        />-->
 
-      <div class="intro">
-        <h1 class="principal-title">
-          <div class="typing-container">
-            <div class="static-line">
-              <span class="static-text">Hola, soy</span>
+        <div class="intro">
+          <h1 class="principal-title">
+            <div class="typing-container">
+              <div class="static-line">
+                <span class="static-text">Hola, soy</span>
+              </div>
+              <div class="typing-line">
+                <span class="typing-text"></span>
+                <span class="cursor"></span>
+              </div>
             </div>
-            <div class="typing-line">
-              <span class="typing-text"></span>
-              <span class="cursor"></span>
-            </div>
-          </div>
-        </h1>
+          </h1>
 
-        <button class="gradient-border-button movement">
-          <a href="#about">Saber más →</a>
-        </button>
-      </div>
+          <button class="gradient-border-button movement">
+            <a href="#about">Saber más →</a>
+          </button>
+        </div>
+      </section>
 
-      <div class="bottom-gap"></div>
+      <section id="about">
+        <section-left
+          id="about"
+          icon="assets/resources/aboutme.png"
+          title="Sobre Mí"
+          description="Tengo 24 años. Soy de Montevideo actualmente viviendo en Punta del Este. Me gusta viajar, el mar, hacer deporte, cocinar y escuchar música."
+          image="https://res.cloudinary.com/homedesigncloud/image/upload/v1743624245/IMG_1008_gmckkn.jpg"
+        >
+        </section-left>
+        <div class="image-row" style="margin-bottom: 50px; margin-top: 3%">
+          <img class="movement" src="assets/resources/travel.png" />
+          <img class="movement" src="assets/resources/beach.png" />
+          <img class="movement" src="assets/resources/gym.png" />
+          <img class="movement" src="assets/resources/sushi.png" />
+          <img class="movement" src="assets/resources/music.png" />
+        </div>
+      </section>
 
-      <section-left
-        id="about"
-        icon="assets/resources/aboutme.png"
-        title="Sobre Mí"
-        description="Tengo 24 años. Soy de Montevideo actualmente viviendo en Punta del Este. Me gusta viajar, el mar, hacer deporte, cocinar y escuchar música."
-        image="https://res.cloudinary.com/homedesigncloud/image/upload/v1743624245/IMG_1008_gmckkn.jpg"
-      >
-      </section-left>
-      <div class="image-row" style="margin-bottom: 50px; margin-top: 3%">
-        <img class="movement" src="assets/resources/travel.png" />
-        <img class="movement" src="assets/resources/beach.png" />
-        <img class="movement" src="assets/resources/gym.png" />
-        <img class="movement" src="assets/resources/sushi.png" />
-        <img class="movement" src="assets/resources/music.png" />
-      </div>
+      <section id="skills">
+        <section-double
+          title-left="Lenguajes de programación"
+          description-left="assets/icons/tech/angular.png, assets/icons/tech/cs.png, assets/icons/tech/cpp.png, assets/icons/tech/css.png, assets/icons/tech/net.png, assets/icons/tech/html.png, assets/icons/tech/java.png, assets/icons/tech/js.png, assets/icons/tech/nodejs.png, assets/icons/tech/py.png, assets/icons/tech/react.png, assets/icons/tech/sql.png, assets/icons/tech/ts.png"
+          title-right="Herramientas"
+          description-right="assets/icons/tools/aws.png, assets/icons/tools/azure.png, assets/icons/tools/docker.png, assets/icons/tools/expo.png, assets/icons/tools/figma.png, assets/icons/tools/jira.png, assets/icons/tools/mongo.png, assets/icons/tools/notion.png, assets/icons/tools/postgres.png, assets/icons/tools/postman.png, assets/icons/tools/selenium.png, assets/icons/tools/visualstudio.png, assets/icons/tools/vscode.png"
+        ></section-double>
+      </section>
 
-      <div class="bottom-gap"></div>
+      <section id="projects">
+        <section-left
+          icon="assets/resources/projects.png"
+          title="Proyectos"
+          description="He desarrollado variedad de aplicaciones de todo tipo durante mi carrera, mi proyecto más reciente fue mi tesis, HomeDesign. Esta plataforma consistía en renderizar muebles 3D a partir de fotografias de muebles reales."
+          image="https://res.cloudinary.com/homedesigncloud/image/upload/v1743626856/curso-Herramientas-planificacion-seguimiento-control-proyectos-online-a-tu-ritmo_ejzr0y.webp"
+        >
+        </section-left>
+      </section>
 
-      <section-double
-        title-left="Lenguajes de programación"
-        description-left="assets/icons/tech/angular.png, assets/icons/tech/cs.png, assets/icons/tech/cpp.png, assets/icons/tech/css.png, assets/icons/tech/net.png, assets/icons/tech/html.png, assets/icons/tech/java.png, assets/icons/tech/js.png, assets/icons/tech/nodejs.png, assets/icons/tech/py.png, assets/icons/tech/react.png, assets/icons/tech/sql.png, assets/icons/tech/ts.png"
-        title-right="Herramientas"
-        description-right="assets/icons/tools/aws.png, assets/icons/tools/azure.png, assets/icons/tools/docker.png, assets/icons/tools/expo.png, assets/icons/tools/figma.png, assets/icons/tools/jira.png, assets/icons/tools/mongo.png, assets/icons/tools/notion.png, assets/icons/tools/postgres.png, assets/icons/tools/postman.png, assets/icons/tools/selenium.png, assets/icons/tools/visualstudio.png, assets/icons/tools/vscode.png"
-      ></section-double>
-
-      <div class="bottom-gap"></div>
-
-      <section-left
-        icon="assets/resources/projects.png"
-        title="Proyectos"
-        description="He desarrollado variedad de aplicaciones de todo tipo durante mi carrera, mi proyecto más reciente fue mi tesis, HomeDesign. Esta plataforma consistía en renderizar muebles 3D a partir de fotografias de muebles reales."
-        image="https://res.cloudinary.com/homedesigncloud/image/upload/v1743626856/curso-Herramientas-planificacion-seguimiento-control-proyectos-online-a-tu-ritmo_ejzr0y.webp"
-      >
-      </section-left>
-
-      <div class="bottom-gap"></div>
-
-      <section-right
-        icon="assets/resources/experience.png"
-        title="Experiencia laboral"
-        description="
+      <section id="work-experience">
+        <section-right
+          icon="assets/resources/experience.png"
+          title="Experiencia laboral"
+          description="
         SNP Group
         Consultor de Transformación 
         Abr 2024 - Actualidad 
         Remoto para Chile
 
         Mi rol es principalmente de cutover, gestionando migraciones de bases de datos de clientes hacia plataformas SAP, en colaboración con distintos equipos."
-        image="https://res.cloudinary.com/homedesigncloud/image/upload/v1743626739/persona-caminando-al-trabajo_cfwcqu.jpg"
-      >
-      </section-right>
+          image="https://res.cloudinary.com/homedesigncloud/image/upload/v1743626739/persona-caminando-al-trabajo_cfwcqu.jpg"
+        >
+        </section-right>
+      </section>
 
-      <div class="bottom-gap"></div>
-
-      <h1 style="font-size: 50px; text-align: center">Títulos</h1>
-      <section-left
-        icon="assets/resources/certificate3.png"
-        description="Ingeniero en sistemas
+      <section id="titles">
+        <h1 style="font-size: 50px; text-align: center">Títulos</h1>
+        <section-left
+          icon="assets/resources/certificate3.png"
+          description="Ingeniero en sistemas
         Universidad ORT Uruguay - 2025"
-        icon-size="10%"
-      ></section-left>
-      <section-left
-        icon="assets/resources/certificate2.png"
-        description="Licenciado en ingenieria de software
+          icon-size="10%"
+        ></section-left>
+        <section-left
+          icon="assets/resources/certificate2.png"
+          description="Licenciado en ingenieria de software
         Universidad ORT Uruguay - 2024"
-        icon-size="10%"
-      ></section-left>
-      <section-left
-        icon="assets/resources/certificate1.png"
-        description="Ayudante de ingeniero en sistemas
+          icon-size="10%"
+        ></section-left>
+        <section-left
+          icon="assets/resources/certificate1.png"
+          description="Ayudante de ingeniero en sistemas
         Universidad ORT Uruguay - 2022"
-        icon-size="10%"
-      ></section-left>
+          icon-size="10%"
+        ></section-left>
+      </section>
 
-      <div class="bottom-gap"></div>
-
-      <h1 style="font-size: 50px; text-align: center">Educación</h1>
-      <section-left
-        icon="assets/images/ort.png"
-        description="Universidad ORT Uruguay
+      <section id="education">
+        <h1 style="font-size: 50px; text-align: center">Educación</h1>
+        <section-left
+          icon="assets/images/ort.png"
+          description="Universidad ORT Uruguay
         Ingenieria en Sistemas
         2020 - 2025"
-        icon-size="15%"
-      ></section-left>
-      <section-left
-        icon="assets/images/ci.png"
-        description="Colegio y Liceo Inglés
+          icon-size="15%"
+        ></section-left>
+        <section-left
+          icon="assets/images/ci.png"
+          description="Colegio y Liceo Inglés
         Primaria y Secundaria
         2003 - 2019"
-        icon-size="15%"
-      ></section-left>
-
-      <div class="bottom-gap"></div>
-
-      <h1 style="font-size: 50px; text-align: center">Idiomas</h1>
-      <div class="side-by-side-section">
-        <section-left
-          icon="assets/resources/english-flag.png"
-          description="Inglés
-        Avanzado (Cambridge First Certificate - B2)"
-          icon-size="10%"
+          icon-size="15%"
         ></section-left>
-        <section-left
-          icon="assets/resources/brazil-flag.png"
-          description="Portugués
-        Intermedio (ULBRA Examen Intermediario - B1)"
-          icon-size="10%"
-        ></section-left>
-      </div>
+      </section>
 
-      <div class="bottom-gap"></div>
+      <language-section></language-section>
+
+      <contact-section></contact-section>
 
       <footer-comp></footer-comp>
     </div>
