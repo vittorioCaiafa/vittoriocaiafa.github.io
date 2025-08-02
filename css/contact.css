@@ -75,7 +75,7 @@
 
 .message-container textarea {
   flex: 3;
-  width: 565px;
+  width: 30rem;
   resize: none;
   padding: 20px;
   border-radius: 12px 0 0 12px;
@@ -128,7 +128,8 @@ textarea.error {
   .message-container textarea,
   .message-container button {
     border-radius: 12px;
-    width: 100%;
+    width: 60%;
+    align-items: center;
   }
 
   .message-container button {
