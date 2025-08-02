@@ -10,7 +10,6 @@ class LanguageSection extends HTMLElement {
     <script src="js/script.js"></script>
       <section id="languages">
         <h1 style="font-size: 50px; text-align: center">Idiomas</h1>
-        <div class="side-by-side-section">
           <section-left
             icon="assets/resources/english-flag.png"
             description="Inglés
@@ -23,7 +22,6 @@ class LanguageSection extends HTMLElement {
         Intermedio (ULBRA Examen Intermediario - B1)"
             icon-size="10%"
           ></section-left>
-        </div>
       </section>`;
   }
 }
