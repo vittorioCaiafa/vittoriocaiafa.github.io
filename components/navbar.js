@@ -5,38 +5,51 @@ class NavBar extends HTMLElement {
   }
 
   connectedCallback() {
+    this.render();
+    this.setupEventListeners();
+  }
+
+  render() {
     this.shadowRoot.innerHTML = `
-        <link rel="stylesheet" href="css/navbar.css" />
-        <link rel="stylesheet" href="css/button.css" />
-        <nav>
-      <ul>
-        <li>
-          <a href="#" onclick="scrollToCenter('about')">Sobre Mí</a>
-        </li>
-        <li>
-          <a href="#" onclick="scrollToCenter('skills')">Habilidades</a>
-        </li>
-        <li>
-          <a href="#" onclick="scrollToCenter('projects')">Proyectos</a>
-        </li>
-        <li>
-          <a href="#" onclick="scrollToCenter('work-experience')">Experiencia</a>
-        </li>
-        <li>
-          <a href="#" onclick="scrollToCenter('titles')">Títulos</a>
-        </li>
-        <li>
-          <a href="#" onclick="scrollToCenter('education')">Educación</a>
-        </li>
-        <li>
-          <a href="#" onclick="scrollToCenter('languages')">Idiomas</a>
-        </li>
-        <li>
-          <a href="#" onclick="scrollToCenter('contact')">
-          <button style="font-size: 0.6rem; padding: 0.4rem;" class="gradient-border-button">Contacto →</button></a>
-        </li> 
-      </ul>
-    </nav>`;
+      <link rel="stylesheet" href="css/navbar.css" />
+      <link rel="stylesheet" href="css/button.css" />
+      <script src="components/button.js"></script>
+  
+      <nav>
+        <div class="navbar">
+          <a href="index.html" class="nav-link">
+            <div class="nav-left">
+              <img src="assets/images/logo.png" class="logo" />
+              <span class="brand-name">Portafolio</span>
+            </div>
+          </a>
+          
+          <div class="nav-center">
+            <ul class="nav-links">
+              <li><a href="#" onclick="location.href='about.html'">Sobre Mí</a></li>
+              <li><a href="#" onclick="location.href='work-experience.html'">Experiencia</a></li>
+              <li><a href="#" onclick="location.href='certificates.html'">Certificados</a></li>
+              <li><a href="#" onclick="location.href='education.html'">Formación</a></li>
+            </ul>
+          </div>
+  
+          <div class="nav-right">
+            <a href="#" onclick="location.href='contact.html'">
+              <button-component>Contacto</button-component>
+            </a>
+          </div>
+        </div>
+      </nav>
+    `;
+  }
+
+  setupEventListeners() {
+    const hamburger = this.shadowRoot.getElementById("hamburger");
+    const navLinks = this.shadowRoot.getElementById("nav-links");
+
+    hamburger.addEventListener("click", () => {
+      navLinks.classList.toggle("show");
+    });
   }
 }
 

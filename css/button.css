@@ -1,29 +1,39 @@
-button {
-  all: unset;
-  font-family: inherit;
-  font-size: inherit;
-  color: inherit;
-  background: none;
+.bttn {
+  min-width: fit-content;
+  max-width: 100%;
+  border-radius: 1em;
   cursor: pointer;
+  transition: 0.3s ease;
+  background: linear-gradient(
+    to bottom right,
+    #2ef1ff 0%,
+    rgba(46, 245, 255, 0) 30%
+  );
+  background-color: rgba(46, 255, 185, 0.2);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  padding: 2px;
 }
 
-button a {
-    text-decoration: none;
-    color: inherit;
+.bttn:hover,
+.bttn:focus {
+  background-color: rgba(46, 255, 227, 0.7);
+  box-shadow: 0 0 10px rgba(46, 255, 238, 0.5);
+  outline: none;
 }
 
-.gradient-border-button {
-  color: white;
-  background: black;
-  padding: 10px 20px;
-  border-radius: 15px;
-  margin-top: -20px;
-  font-size: 20px;
-  cursor: pointer;
-
-  border: 2px solid transparent;
-  background-image: linear-gradient(black, black),
-    /* inner background */ linear-gradient(135deg, #28727b 0%, #27dddd 100%); /* border */
-  background-origin: border-box;
-  background-clip: padding-box, border-box;
+.bttn-inner {
+  padding: 0em 3em;
+  border-radius: 0.9em;
+  background-color: #1a1a1a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

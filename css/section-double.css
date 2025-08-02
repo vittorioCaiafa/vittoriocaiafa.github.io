@@ -64,3 +64,23 @@
 .images-container img:hover {
   filter: drop-shadow(0 0 12px rgba(255, 255, 255, 1.5));
 }
+
+@media screen and (max-width: 768px) {
+  :host {
+    flex-direction: column;
+    margin: 10%;
+  }
+
+  .text-content {
+    padding: 20px;
+  }
+
+  .text-content h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .images-container img {
+    width: 40px;
+  }
+}

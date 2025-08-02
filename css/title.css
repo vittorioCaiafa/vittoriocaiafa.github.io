@@ -1,41 +1,67 @@
 .typing-container {
-    font-size: 2.5rem;
-    font-family: monospace;
-    color: white;
-    display: flex;
-    flex-direction: column; /* Cambia la dirección a vertical */
-    align-items: flex-start; /* Alinea a la izquierda */
+  font-family: monospace;
+  color: white;
+  display: flex;
+  flex-direction: column; /* Cambia la dirección a vertical */
+}
+
+.typing-line {
+  position: relative;
+  display: inline-block;
+  font-size: 30px;
+  height: 1.2em; /* asegura altura fija */
+}
+
+.typing-text-placeholder {
+  visibility: hidden; /* ocupa espacio sin mostrarse */
+  font-size: 30px;
+  position: absolute;
+}
+
+.typing-text {
+  font-size: 30px;
+  color: #27ffff;
+}
+
+.cursor {
+  width: 10px;
+  height: 1.5em;
+  background-color: #27ffff;
+  margin-left: 5px;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
   }
-  
-  .static-line, .typing-line {
-    display: flex;
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .typing-container {
+    font-size: 1.5rem;
     align-items: center;
+    text-align: center;
   }
-  
-  /* Tus estilos originales se mantienen igual a partir de aquí */
-  .static-text,
-  .typing-text {
-    white-space: nowrap;
+
+  .static-line,
+  .typing-line {
+    justify-content: center;
   }
-  
-  .typing-text {
-    color: #27ffff;
-  }
-  
-  .cursor {
-    width: 10px;
-    height: 1.5em;
-    background-color: #27ffff;
-    margin-left: 5px;
-    animation: blink 0.7s infinite;
-  }
-  
-  @keyframes blink {
-    0%,
-    100% {
-      opacity: 1;
-    }
-    50% {
-      opacity: 0;
-    }
-  }
+}

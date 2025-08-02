@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portafolio | Vittorio Caiafa</title>
+    <!-- CSS -->
+    <!-- CSS -> local -->
+    <link rel="stylesheet" href="css/background.css" />
+    <link rel="stylesheet" href="css/body.css" />
+    <link rel="stylesheet" href="css/button.css" />
+    <link rel="stylesheet" href="css/movement.css" />
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/title.css" />
+    <link rel="stylesheet" href="css/contact.css" />
+    <link rel="stylesheet" href="css/hero.css" />
+    <!-- CSS -> github -->
+    <link
+      rel="stylesheet"
+      href="https://raw.githubusercontent.com/vittorioCaiafa/vittoriocaiafa.github.io/main/css/background.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://raw.githubusercontent.com/vittorioCaiafa/vittoriocaiafa.github.io/main/css/body.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://raw.githubusercontent.com/vittorioCaiafa/vittoriocaiafa.github.io/main/css/footer.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://raw.githubusercontent.com/vittorioCaiafa/vittoriocaiafa.github.io/main/css/navbar.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://raw.githubusercontent.com/vittorioCaiafa/vittoriocaiafa.github.io/main/css/section.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://raw.githubusercontent.com/vittorioCaiafa/vittoriocaiafa.github.io/main/css/movement.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://raw.githubusercontent.com/vittorioCaiafa/vittoriocaiafa.github.io/main/css/button.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://raw.githubusercontent.com/vittorioCaiafa/vittoriocaiafa.github.io/main/css/title.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://raw.githubusercontent.com/vittorioCaiafa/vittoriocaiafa.github.io/main/css/contact.css"
+    />
+    <!-- SECTIONS -->
+    <script src="sections/language-section.js" defer></script>
+    <script src="sections/contact-section.js" defer></script>
+    <!-- COMPONENTS -->
+    <script src="components/section-left.js" defer></script>
+    <script src="components/section-right.js" defer></script>
+    <script src="components/section-double.js" defer></script>
+    <script src="components/footer.js" defer></script>
+    <script src="components/navbar.js" defer></script>
+    <script src="components/button.js" defer></script>
+    <!-- SCRIPT -->
+    <script src="js/script.js" defer></script>
+  </head>
+  <body>
+    <!-- BACKGROUNDS -->
+    <!-- Background Video -->
+    <video autoplay muted loop playsinline class="background-video">
+      <source src="assets/backgrounds/bg.mp4" type="video/mp4" />
+      <source
+        src="https://raw.githubusercontent.com/vittorioCaiafa/vittoriocaiafa.github.io/main/assets/backgrounds/bg.mp4"
+        type="video/mp4"
+      />
+      Your browser does not support the video tag.
+    </video>
+
+    <!-- PAGE CONTENT -->
+    <div class="content">
+      <header>
+        <navbar-comp></navbar-comp>
+      </header>
+
+      <section id="about">
+        <section-left
+          id="about"
+          icon="assets/resources/aboutme.png"
+          title="Sobre Mí"
+          description="Soy Ingeniero en Sistemas graduado de la Universidad ORT Uruguay. Tengo 24 años. Soy de Montevideo, Uruguay actualmente viviendo en Punta del Este. Me gusta viajar, el mar, hacer deporte, cocinar y escuchar música."
+          image="https://res.cloudinary.com/homedesigncloud/image/upload/v1743624245/IMG_1008_gmckkn.jpg"
+        >
+        </section-left>
+        <div class="image-row" style="margin-bottom: 50px; margin-top: 3%">
+          <img
+            style="width: 10%"
+            class="movement"
+            src="assets/resources/travel.png"
+          />
+          <img
+            style="width: 10%"
+            class="movement"
+            src="assets/resources/beach.png"
+          />
+          <img
+            style="width: 10%"
+            class="movement"
+            src="assets/resources/gym.png"
+          />
+          <img
+            style="width: 10%"
+            class="movement"
+            src="assets/resources/sushi.png"
+          />
+          <img
+            style="width: 10%"
+            class="movement"
+            src="assets/resources/music.png"
+          />
+        </div>
+      </section>
+
+      <section id="projects">
+        <section-right
+          icon="assets/resources/projects.png"
+          title="Proyectos académicos"
+          description="Durante mi carrera como Ingeniero en Sistemas he trabajado en una amplia variedad de proyectos, tanto individuales como grupales, que abarcan distintas áreas y desafíos del desarrollo de software.
+
+          Algunos de los más destacados incluyen aplicaciones web y móviles, sistemas de gestión de bases de datos, plataformas de e-commerce, videojuegos e iniciativas relacionadas con inteligencia artificial, como sistemas de recomendación, análisis predictivo y procesamiento de lenguaje natural (NLP). Estos proyectos combinaban múltiples tecnologías y lenguajes de programación, como Python, Angular, React, Node.js, TypeScript, JavaScript, SQL, entre muchas otras.
+          
+          A lo largo de los distintos desarrollos, exploré tanto arquitecturas monolíticas como basadas en microservicios, entendiendo las ventajas y desventajas de cada enfoque según el contexto. Trabajé con diferentes paradigmas de desarrollo, incluyendo programación orientada a objetos, funcional y basada en eventos, aplicando buenas prácticas como separación de responsabilidades, modularización y pruebas automatizadas.
+          
+          Me adapté a distintos stacks y enfoques de desarrollo, utilizando herramientas y frameworks modernos según lo requería cada proyecto. En los proyectos con componentes de inteligencia artificial, integré librerías especializadas para aprendizaje automático, análisis de datos y procesamiento de lenguaje natural. Además, trabajé con herramientas como Git, GitHub, AWS, Docker y Postman, en entornos colaborativos y con metodologías ágiles."
+          statnumber1="5"
+          statlabel1="Años de<br>experiencia"
+          statnumber2="+50"
+          statlabel2="Proyectos<br>realizados"
+          statnumber3="+500"
+          statlabel3="Sesiones<br>coordinadas"
+        ></section-right>
+      </section>
+
+      <section id="skills">
+        <section-double
+          title-left="Lenguajes de programación"
+          description-left="assets/icons/tech/angular.png, assets/icons/tech/cs.png, assets/icons/tech/cpp.png, assets/icons/tech/css.png, assets/icons/tech/net.png, assets/icons/tech/html.png, assets/icons/tech/java.png, assets/icons/tech/js.png, assets/icons/tech/nodejs.png, assets/icons/tech/py.png, assets/icons/tech/react.png, assets/icons/tech/sql.png, assets/icons/tech/ts.png"
+          title-right="Herramientas"
+          description-right="assets/icons/tools/aws.png, assets/icons/tools/azure.png, assets/icons/tools/docker.png, assets/icons/tools/expo.png, assets/icons/tools/figma.png, assets/icons/tools/jira.png, assets/icons/tools/mongo.png, assets/icons/tools/notion.png, assets/icons/tools/postgres.png, assets/icons/tools/postman.png, assets/icons/tools/selenium.png, assets/icons/tools/visualstudio.png, assets/icons/tools/vscode.png"
+        ></section-double>
+      </section>
+      <footer-comp></footer-comp>
+    </div>
+  </body>
+</html>

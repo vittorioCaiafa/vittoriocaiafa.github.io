@@ -2,10 +2,12 @@
 document.addEventListener("DOMContentLoaded", () => {
   // Typing effect
   const words = [
-    "Vittorio Caiafa",
-    "Ingeniero en Sistemas",
-    "Desarrollador FullStack",
-    "Apasionado por la tecnología",
+    "Escalables",
+    "Seguras",
+    "Eficientes",
+    "Adaptables",
+    "Intuitivas",
+    "Innovadoras",
   ];
 
   const typingText = document.querySelector(".typing-text");

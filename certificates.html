@@ -83,33 +83,32 @@
         <navbar-comp></navbar-comp>
       </header>
 
-      <section class="hero">
-        <div class="hero-content">
-          <h1 class="principal-title">Transformo tus problemas en</h1>
-          <h1 class="principal-title highlight">soluciones tecnológicas</h1>
-
-          <div
-            style="display: flex; justify-content: center"
-            class="typing-container"
-          >
-            <div class="typing-line">
-              <span class="typing-text-placeholder">Innovadoras</span>
-              <!-- Ocupa espacio fijo -->
-              <span class="typing-text" style="font-size: 30px"></span>
-              <span class="cursor">|</span>
-            </div>
-          </div>
-
-          <a
-            style="display: flex; justify-content: center"
-            href="#about"
-            onclick="location.href='about.html'"
-          >
-            <button-component class="hero-button">Saber más</button-component>
-          </a>
-        </div>
+      <section id="titles">
+        <h1 style="font-size: 50px; text-align: center">Títulos</h1>
+        <section-left
+          icon="assets/resources/certificate3.png"
+          description="Ingeniero en sistemas
+    Universidad ORT Uruguay - 2025"
+          icon-size="10%"
+        ></section-left>
+        <section-left
+          icon="assets/resources/certificate2.png"
+          description="Licenciado en ingenieria de software
+    Universidad ORT Uruguay - 2024"
+          icon-size="10%"
+        ></section-left>
+        <section-left
+          icon="assets/resources/certificate1.png"
+          description="Ayudante de ingeniero en sistemas
+    Universidad ORT Uruguay - 2022"
+          icon-size="10%"
+        ></section-left>
       </section>
 
+      <section id="languages">
+        <language-section></language-section>
+      </section>
+      
       <footer-comp></footer-comp>
     </div>
   </body>

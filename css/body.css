@@ -1,12 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Cal+Sans:wght@400;600&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;300;400;600;700&display=swap");
 
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  font-family: "Mulish", sans-serif;
+  font-family: "Outfit", sans-serif;
   font-weight: lighter;
   font-style: normal;
   margin: 0;
@@ -16,11 +16,6 @@ body {
   overflow-x: hidden;
   background: black;
   font-size: 1.4em;
-}
-
-.principal-title {
-  font-size: 50px;
-  font-weight: 900;
 }
 
 h1 {
@@ -46,7 +41,8 @@ h2:hover {
 }
 
 section {
-  margin-bottom: 25%;
+  margin-top: 5%;
+  margin-bottom: 10%;
 }
 
 .intro {
