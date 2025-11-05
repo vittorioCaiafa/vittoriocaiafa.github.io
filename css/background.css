@@ -12,3 +12,20 @@
   z-index: 1;
   color: white; /* Ensure visibility over video */
 }
+
+iframe {
+  border: none;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  display: block;
+  scrollbar-width: none; /* Firefox */
+}
+
+iframe::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
+}
+
+section iframe {
+  background: transparent;
+}

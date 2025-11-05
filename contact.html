@@ -3,9 +3,9 @@
   <script type="module" src="js/i18n.js"></script>
 </head>
 <section id="contact" class="min-h-screen py-20">
-  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+  <div class=" container mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-12 animate-fade-in">
-      <h2 data-i18n="contact.title" class="text-4xl font-bold text-foreground mb-4"></h2>
+      <h2 data-i18n="label.contact" class="text-4xl font-bold text-foreground mb-4"></h2>
       <p data-i18n="contact.subtitle" class="text-lg text-muted-foreground max-w-2xl mx-auto"></p>
     </div>
 
@@ -16,18 +16,18 @@
 
         <form class="space-y-4" action="mailto:vittorio.caiafa@example.com" method="POST" enctype="text/plain">
           <div>
-            <input type="text" name="name" data-i18n-placeholder="contact.form.name" required
+            <input type="text" name="name" data-i18n-placeholder="label.name" required
               class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary" />
           </div>
           <div>
-            <input type="email" name="email" data-i18n-placeholder="contact.form.email" required
+            <input type="email" name="email" data-i18n-placeholder="label.email" required
               class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary" />
           </div>
           <div>
-            <textarea name="message" data-i18n-placeholder="contact.form.message" rows="5" required
+            <textarea name="message" data-i18n-placeholder="label.message" rows="5" required
               class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary"></textarea>
           </div>
-          <button type="submit" data-i18n="contact.form.button"
+          <button type="submit" data-i18n="label.send"
             class="w-full flex items-center justify-center gap-2 bg-primary text-white px-4 py-3 rounded-lg shadow-elegant hover:opacity-90 transition"></button>
         </form>
       </div>
@@ -44,13 +44,13 @@
 
         <div class="bg-white rounded-xl shadow-elegant p-6">
           <h3 class="flex items-center gap-2 text-xl font-semibold mb-3">
-            📍 <span data-i18n="contact.location.title"></span>
+            📍 <span data-i18n="label.location"></span>
           </h3>
-          <p data-i18n="contact.location.value" class="text-muted-foreground"></p>
+          <p data-i18n="info.location" class="text-muted-foreground"></p>
         </div>
 
         <div class="bg-white rounded-xl shadow-elegant p-6">
-          <h3 data-i18n="contact.social.title" class="text-xl font-semibold mb-3"></h3>
+          <h3 data-i18n="label.social" class="text-xl font-semibold mb-3"></h3>
           <a href="https://linkedin.com/in/vittorio-caiafa" target="_blank" class="block text-primary hover:underline">
             LinkedIn →
           </a>

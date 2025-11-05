@@ -41,6 +41,7 @@
   <script src="components/section-double.js" defer></script>
   <script src="components/footer.js" defer></script>
   <script src="components/navbar.js" defer></script>
+  <script src="components/navigation.js" defer></script>
   <script src="components/button.js" defer></script>
   <script type="module" src="js/i18n.js"></script>
   <script src="js/script.js" defer></script>
@@ -57,33 +58,24 @@
   <div class="content">
     <header>
       <navbar-comp></navbar-comp>
+      <navigation-comp></navigation-comp>
     </header>
-    <button onclick="toggleLanguage()" data-i18n="label.oppositeLanguage"></button>
-
-    <section>
-      <iframe src="about.html" style="width: 100%; height: 100vh; border: none;"></iframe>
+    <section id="about" style="overflow: hidden;">
+      <iframe src="about.html" scrolling="no" style="width: 100%; height: 100vh; border: none; overflow: hidden; display: block;"></iframe>
     </section>
-    <section>
-      <iframe src="skills.html" style="width: 100%; height: 100vh; border: none;"></iframe>
+    <section id="skills" style="overflow: hidden;">
+      <iframe src="skills.html" scrolling="no" style="width: 100%; height: 100vh; border: none; overflow: hidden; display: block;"></iframe>
     </section>
-    <section>
-      <iframe src="experience.html" style="width: 100%; height: 100vh; border: none;"></iframe>
+    <section id="experience" style="overflow: hidden;">
+      <iframe src="experience.html" scrolling="no" style="width: 100%; height: 100vh; border: none; overflow: hidden; display: block;"></iframe>
     </section>
-    <section>
-      <iframe src="projects.html" style="width: 100%; height: 100vh; border: none;"></iframe>
+    <section id="projects" style="overflow: hidden;">
+      <iframe src="projects.html" scrolling="no" style="width: 100%; height: 100vh; border: none; overflow: hidden; display: block;"></iframe>
     </section>
-    <section>
-      <iframe src="contact.html" style="width: 100%; height: 100vh; border: none;"></iframe>
+    <section id="contact" style="overflow: hidden;">
+      <iframe src="contact.html" scrolling="no" style="width: 100%; height: 100vh; border: none; overflow: hidden; display: block;"></iframe>
     </section>
-
     <!-- <footer-comp></footer-comp> -->
-
-
-</body>
-
-</html>
-
-</div>
 </body>
 
 </html>

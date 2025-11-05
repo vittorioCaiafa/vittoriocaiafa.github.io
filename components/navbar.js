@@ -47,7 +47,7 @@ class NavbarComp extends HTMLElement {
     this.innerHTML = `
       <nav class="navbar">
         <div class="nav-container">
-          <a href="index.html" class="nav-brand">Vittorio Caiafa</a>
+          <a href="#" class="nav-brand">Vittorio Caiafa</a>
           <button class="nav-toggle" aria-label="Toggle navigation">
             <span></span>
             <span></span>
@@ -55,18 +55,25 @@ class NavbarComp extends HTMLElement {
           </button>
           <ul class="nav-menu">
             <li class="nav-item">
-              <nav-link to="index.html">Inicio</nav-link>
+              <a href="#about" class="nav-link">Sobre Mí</a>
             </li>
             <li class="nav-item">
-              <nav-link to="about.html">Sobre Mí</nav-link>
+              <a href="#skills" class="nav-link">Habilidades</a>
             </li>
             <li class="nav-item">
-              <nav-link to="projects.html">Proyectos</nav-link>
+              <a href="#experience" class="nav-link">Experiencia</a>
             </li>
             <li class="nav-item">
-              <nav-link to="contact.html">Contacto</nav-link>
+              <a href="#projects" class="nav-link">Proyectos</a>
+            </li>
+            <li class="nav-item">
+              <a href="#contact" class="nav-link">Contacto</a>
+            </li>
+            <li class="nav-item">
+              <button onclick="toggleLanguage()" data-i18n="label.oppositeLanguage"></button>
             </li>
           </ul>
+          
         </div>
       </nav>
     `;

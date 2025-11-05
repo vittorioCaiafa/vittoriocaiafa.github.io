@@ -1,13 +1,17 @@
-import { translations } from "./translations.js";
+import { es } from "./i18n-es.js";
+import { en } from "./i18n-en.js";
+
+export const translations = {
+    es, en
+};
 
 let currentLang = localStorage.getItem("lang") || "es";
-
 function getTranslation(key) {
     return translations[currentLang]?.[key] || key;
 }
 
 function getNestedTranslation(key) {
-    const keys = key.split("."); // Split the key into parts
+    const keys = key.split(".");
     if (keys.length === 1) {
         return getTranslation(key);
     }
@@ -18,7 +22,7 @@ function getNestedTranslation(key) {
             translation = translation[part];
         } else {
             console.warn(`Translation for key '${key}' not found in language '${currentLang}'.`);
-            return key; // Return the key itself if translation is not found
+            return key;
         }
     }
 
@@ -39,12 +43,22 @@ export function setLanguage(lang) {
         const key = el.getAttribute("data-i18n-placeholder");
         el.placeholder = getNestedTranslation(key);
     });
+
+    document.querySelectorAll('iframe').forEach(iframe => {
+        iframe.contentWindow.postMessage({ type: 'LANGUAGE_CHANGE', lang: lang }, '*');
+    });
 }
 
 export function toggleLanguage() {
     const newLang = currentLang === "es" ? "en" : "es";
     setLanguage(newLang);
 }
+
+window.addEventListener('message', (event) => {
+    if (event.data.type === 'LANGUAGE_CHANGE') {
+        setLanguage(event.data.lang);
+    }
+});
 
 document.addEventListener("DOMContentLoaded", () => {
     setLanguage(currentLang);
