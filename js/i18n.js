@@ -26,6 +26,11 @@ function getNestedTranslation(key) {
         }
     }
 
+    // Si la traducción es una referencia a otra clave (ej: "tech.react"), resolverla
+    if (typeof translation === "string" && translation.includes(".")) {
+        return getNestedTranslation(translation);
+    }
+
     return translation;
 }
 
