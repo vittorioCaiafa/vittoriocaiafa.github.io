@@ -1,155 +1,73 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portafolio | Vittorio Caiafa</title>
-    <!-- CSS -->
-    <!-- CSS -> local -->
-    <link rel="stylesheet" href="css/background.css" />
-    <link rel="stylesheet" href="css/body.css" />
-    <link rel="stylesheet" href="css/button.css" />
-    <link rel="stylesheet" href="css/movement.css" />
-    <link rel="stylesheet" href="css/navbar.css" />
-    <link rel="stylesheet" href="css/footer.css" />
-    <link rel="stylesheet" href="css/title.css" />
-    <link rel="stylesheet" href="css/contact.css" />
-    <link rel="stylesheet" href="css/hero.css" />
-    <!-- CSS -> github -->
-    <link
-      rel="stylesheet"
-      href="https://raw.githubusercontent.com/vittorioCaiafa/vittoriocaiafa.github.io/main/css/background.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://raw.githubusercontent.com/vittorioCaiafa/vittoriocaiafa.github.io/main/css/body.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://raw.githubusercontent.com/vittorioCaiafa/vittoriocaiafa.github.io/main/css/footer.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://raw.githubusercontent.com/vittorioCaiafa/vittoriocaiafa.github.io/main/css/navbar.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://raw.githubusercontent.com/vittorioCaiafa/vittoriocaiafa.github.io/main/css/section.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://raw.githubusercontent.com/vittorioCaiafa/vittoriocaiafa.github.io/main/css/movement.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://raw.githubusercontent.com/vittorioCaiafa/vittoriocaiafa.github.io/main/css/button.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://raw.githubusercontent.com/vittorioCaiafa/vittoriocaiafa.github.io/main/css/title.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://raw.githubusercontent.com/vittorioCaiafa/vittoriocaiafa.github.io/main/css/contact.css"
-    />
-    <!-- SECTIONS -->
-    <script src="sections/language-section.js" defer></script>
-    <script src="sections/contact-section.js" defer></script>
-    <!-- COMPONENTS -->
-    <script src="components/section-left.js" defer></script>
-    <script src="components/section-right.js" defer></script>
-    <script src="components/section-double.js" defer></script>
-    <script src="components/footer.js" defer></script>
-    <script src="components/navbar.js" defer></script>
-    <script src="components/button.js" defer></script>
-    <!-- SCRIPT -->
-    <script src="js/script.js" defer></script>
-  </head>
-  <body>
-    <!-- BACKGROUNDS -->
-    <!-- Background Video -->
-    <video autoplay muted loop playsinline class="background-video">
-      <source src="assets/backgrounds/bg.mp4" type="video/mp4" />
-      <source
-        src="https://raw.githubusercontent.com/vittorioCaiafa/vittoriocaiafa.github.io/main/assets/backgrounds/bg.mp4"
-        type="video/mp4"
-      />
-      Your browser does not support the video tag.
-    </video>
 
-    <!-- PAGE CONTENT -->
-    <div class="content">
-      <header>
-        <navbar-comp></navbar-comp>
-      </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sobre mí</title>
+  <link rel="stylesheet" href="css/about.css" />
+  <script type="module" src="js/i18n.js"></script>
+</head>
 
-      <section id="about">
-        <section-left
-          id="about"
-          icon="assets/resources/aboutme.png"
-          title="Vittorio Caiafa"
-          description="Soy Ingeniero en Sistemas graduado de la Universidad ORT Uruguay. Tengo 24 años. Soy de Montevideo, Uruguay actualmente viviendo en Punta del Este. Me gusta viajar, el mar, hacer deporte, cocinar y escuchar música."
-          image="https://res.cloudinary.com/homedesigncloud/image/upload/v1743624245/IMG_1008_gmckkn.jpg"
-        >
-        </section-left>
-        <div class="image-row" style="margin-bottom: 50px; margin-top: 3%">
-          <img
-            style="width: 10%"
-            class="movement"
-            src="assets/resources/travel.png"
-          />
-          <img
-            style="width: 10%"
-            class="movement"
-            src="assets/resources/beach.png"
-          />
-          <img
-            style="width: 10%"
-            class="movement"
-            src="assets/resources/gym.png"
-          />
-          <img
-            style="width: 10%"
-            class="movement"
-            src="assets/resources/sushi.png"
-          />
-          <img
-            style="width: 10%"
-            class="movement"
-            src="assets/resources/music.png"
-          />
+<body>
+  <section id="about">
+    <div class="container">
+      <div class="text-content animate-slide-in">
+        <div class="intro">
+          <p class="text-primary" data-i18n="label.hello"></p>
+          <h1 data-i18n="info.name"></h1>
+          <h2 data-i18n="info.title"></h2>
         </div>
-      </section>
 
-      <section id="projects">
-        <section-right
-          icon="assets/resources/projects.png"
-          title="Proyectos académicos"
-          description="Durante mi carrera como Ingeniero en Sistemas he trabajado en una amplia variedad de proyectos, tanto individuales como grupales, que abarcan distintas áreas y desafíos del desarrollo de software.
+        <p data-i18n="info.description"></p>
 
-          Algunos de los más destacados incluyen aplicaciones web y móviles, sistemas de gestión de bases de datos, plataformas de e-commerce, videojuegos e iniciativas relacionadas con inteligencia artificial, como sistemas de recomendación, análisis predictivo y procesamiento de lenguaje natural (NLP). Estos proyectos combinaban múltiples tecnologías y lenguajes de programación, como Python, Angular, React, Node.js, TypeScript, JavaScript, SQL, entre muchas otras.
-          
-          A lo largo de los distintos desarrollos, exploré tanto arquitecturas monolíticas como basadas en microservicios, entendiendo las ventajas y desventajas de cada enfoque según el contexto. Trabajé con diferentes paradigmas de desarrollo, incluyendo programación orientada a objetos, funcional y basada en eventos, aplicando buenas prácticas como separación de responsabilidades, modularización y pruebas automatizadas.
-          
-          Me adapté a distintos stacks y enfoques de desarrollo, utilizando herramientas y frameworks modernos según lo requería cada proyecto. En los proyectos con componentes de inteligencia artificial, integré librerías especializadas para aprendizaje automático, análisis de datos y procesamiento de lenguaje natural. Además, trabajé con herramientas como Git, GitHub, AWS, Docker y Postman, en entornos colaborativos y con metodologías ágiles."
-          statnumber1="5"
-          statlabel1="Años de<br>experiencia"
-          statnumber2="+50"
-          statlabel2="Proyectos<br>realizados"
-          statnumber3="+500"
-          statlabel3="Sesiones<br>coordinadas"
-        ></section-right>
-      </section>
+        <div class="location">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M12 11c0 1.104-.896 2-2 2s-2-.896-2-2 .896-2 2-2 2 .896 2 2zM12 2c4.418 0 8 3.582 8 8 0 6.627-8 12-8 12S4 16.627 4 10c0-4.418 3.582-8 8-8z" />
+          </svg>
+          <span data-i18n="info.location"></span>
+        </div>
 
-      <section id="skills">
-        <section-double
-          title-left="Lenguajes de programación"
-          description-left="assets/icons/tech/angular.png, assets/icons/tech/cs.png, assets/icons/tech/cpp.png, assets/icons/tech/css.png, assets/icons/tech/net.png, assets/icons/tech/html.png, assets/icons/tech/java.png, assets/icons/tech/js.png, assets/icons/tech/nodejs.png, assets/icons/tech/py.png, assets/icons/tech/react.png, assets/icons/tech/sql.png, assets/icons/tech/ts.png"
-          title-right="Herramientas"
-          description-right="assets/icons/tools/aws.png, assets/icons/tools/azure.png, assets/icons/tools/docker.png, assets/icons/tools/expo.png, assets/icons/tools/figma.png, assets/icons/tools/jira.png, assets/icons/tools/mongo.png, assets/icons/tools/notion.png, assets/icons/tools/postgres.png, assets/icons/tools/postman.png, assets/icons/tools/selenium.png, assets/icons/tools/visualstudio.png, assets/icons/tools/vscode.png"
-        ></section-double>
-      </section>
-      <footer-comp></footer-comp>
+        <div class="buttons">
+          <a href="#contact" class="btn primary" data-i18n="contact.contactMe"></a>
+          <a href="#projects" class="btn outline" data-i18n="projects.viewProjects"></a>
+        </div>
+
+        <div class="socials">
+          <a href="https://linkedin.com/in/vittorio-caiafa" target="_blank" title="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M16 8a6 6 0 016 6v6h-4v-6a2 2 0 00-4 0v6h-4v-6a6 6 0 016-6zM2 9h4v12H2zM4 4a2 2 0 110 4 2 2 0 010-4z" />
+            </svg>
+          </a>
+          <a href="https://github.com/vittoriocaiafa" target="_blank" title="GitHub">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M12 2a10 10 0 00-3.162 19.48c.5.09.682-.217.682-.482v-1.693c-2.782.604-3.369-1.342-3.369-1.342-.455-1.158-1.11-1.466-1.11-1.466-.908-.62.07-.607.07-.607 1.003.07 1.53 1.032 1.53 1.032.893 1.53 2.345 1.09 2.92.833.09-.647.35-1.09.64-1.343-2.22-.253-4.555-1.11-4.555-4.944 0-1.09.39-1.984 1.03-2.68-.104-.253-.446-1.27.104-2.64 0 0 .84-.27 2.75 1.03a9.42 9.42 0 015 0c1.91-1.3 2.75-1.03 2.75-1.03.55 1.37.208 2.387.104 2.64.64.696 1.03 1.59 1.03 2.68 0 3.845-2.345 4.69-4.58 4.944.36.31.69.918.69 1.86v2.753c0 .27.18.577.69.48A10 10 0 0012 2z" />
+            </svg>
+          </a>
+          <a href="mailto:vittorio.caiafa@example.com" title="Email">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 4h16v16H4z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M22 6L12 13 2 6" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="avatar-wrapper animate-scale-in">
+        <div class="avatar-glow"></div>
+        <div class="avatar">
+          <img height="100%" src="assets/images/principal.jpeg" />
+        </div>
+      </div>
     </div>
-  </body>
+  </section>
+</body>
+
 </html>
