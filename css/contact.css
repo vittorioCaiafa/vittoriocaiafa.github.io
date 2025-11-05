@@ -1,8 +1,8 @@
 #contact {
   min-height: 100vh;
   padding: 5rem 0;
-  background: #fff;
-  color: #1e293b;
+  background: linear-gradient(to bottom, var(--background), rgba(var(--secondary-rgb), 0.1));
+  color: var(--foreground);
   font-family: 'Inter', sans-serif;
 }
 
@@ -12,29 +12,28 @@
   padding: 0 1.5rem;
 }
 
-#contact .text-center {
+.section-header {
   text-align: center;
   margin-bottom: 3rem;
   animation: fadeIn 1s ease forwards;
 }
 
-#contact h2 {
+.section-title {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #0f172a;
+  color: var(--foreground);
   margin-bottom: 1rem;
 }
 
-#contact p {
+.section-subtitle {
   font-size: 1.125rem;
-  color: #64748b;
+  color: var(--muted-foreground);
   max-width: 700px;
   margin: 0 auto;
   line-height: 1.6;
 }
 
-/* ===== Grid ===== */
-#contact .grid {
+.contact-grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
@@ -43,40 +42,42 @@
 }
 
 @media (min-width: 768px) {
-  #contact .grid {
+  .contact-grid {
     grid-template-columns: 1fr 1fr;
   }
 }
 
-#contact .card {
-  background: #f8fafc;
+.card {
+  background: var(--card-bg, #fff);
   border-radius: 1rem;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
-  padding: 2rem;
+  box-shadow: var(--shadow, 0 4px 16px rgba(0, 0, 0, 0.05));
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
   transition: all 0.3s ease;
 }
 
-#contact .card:hover {
+.card:hover {
   transform: translateY(-4px);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
 }
 
-#contact .card-title {
+.card-title {
   font-size: 1.25rem;
   font-weight: 600;
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  color: #0f172a;
+  color: var(--foreground);
+  margin-bottom: 0.5rem;
 }
 
-#contact .card-description {
-  color: #64748b;
+.card-description {
+  color: var(--muted-foreground);
   font-size: 0.95rem;
   margin-top: 0.25rem;
 }
 
-#contact .card-content {
+.card-content {
   margin-top: 1rem;
 }
 
@@ -89,26 +90,27 @@
 
 #contact input,
 #contact textarea {
-  width: 100%;
-  border: 1px solid #e2e8f0;
+  width: 91.5%;
+  border: 1px solid var(--border, #e2e8f0);
   border-radius: 0.5rem;
   padding: 0.75rem 1rem;
   font-size: 1rem;
   outline: none;
   transition: border 0.2s, box-shadow 0.2s;
   background: #fff;
+  color: var(--foreground);
 }
 
 #contact input:focus,
 #contact textarea:focus {
-  border-color: #2563eb;
+  border-color: var(--primary, #2563eb);
   box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.1);
 }
 
 /* ===== Botón enviar ===== */
 #contact button {
-  background-color: #2563eb;
-  color: white;
+  background-color: var(--primary, #2563eb);
+  color: #fff;
   font-weight: 600;
   border: none;
   border-radius: 0.5rem;
@@ -129,13 +131,15 @@
 }
 
 /* ===== Enlaces ===== */
-#contact a {
-  color: #2563eb;
+.contact-link {
+  color: var(--primary, #2563eb);
   text-decoration: none;
+  display: block;
+  margin-bottom: 0.25rem;
   transition: color 0.2s;
 }
 
-#contact a:hover {
+.contact-link:hover {
   text-decoration: underline;
 }
 

@@ -1,64 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+
 <head>
-  <link rel="stylesheet" href="css/contact.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+  <link rel="stylesheet" href="css/contact.css" />
   <script type="module" src="js/i18n.js"></script>
+  <title>Contacto - Vittorio Caiafa</title>
 </head>
-<section id="contact" class="min-h-screen py-20">
-  <div class=" container mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center mb-12 animate-fade-in">
-      <h2 data-i18n="label.contact" class="text-4xl font-bold text-foreground mb-4"></h2>
-      <p data-i18n="contact.subtitle" class="text-lg text-muted-foreground max-w-2xl mx-auto"></p>
-    </div>
 
-    <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
-      <div class="bg-white rounded-xl shadow-elegant p-6 animate-slide-in">
-        <h3 data-i18n="contact.form.title" class="text-2xl font-semibold mb-2"></h3>
-        <p data-i18n="contact.form.subtitle" class="text-muted-foreground mb-6"></p>
+<body>
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <div class="section-header animate-fade-in">
+        <h2 data-i18n="label.contact" class="section-title"></h2>
+        <p data-i18n="contact.mainTitle" class="section-subtitle"></p>
+      </div>
 
-        <form class="space-y-4" action="mailto:vittorio.caiafa@example.com" method="POST" enctype="text/plain">
-          <div>
-            <input type="text" name="name" data-i18n-placeholder="label.name" required
-              class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary" />
-          </div>
-          <div>
+      <div class="contact-grid">
+        <!-- Formulario -->
+        <div class="card animate-slide-in">
+          <h3 data-i18n="contact.title" class="card-title"></h3>
+          <p data-i18n="contact.subtitle" class="card-description"></p>
+
+          <form action="mailto:vittorio.caiafa@example.com" method="POST" enctype="text/plain">
+            <input type="text" name="name" data-i18n-placeholder="label.name" required placeholder="Nombre" />
             <input type="email" name="email" data-i18n-placeholder="label.email" required
-              class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary" />
-          </div>
-          <div>
-            <textarea name="message" data-i18n-placeholder="label.message" rows="5" required
-              class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary"></textarea>
-          </div>
-          <button type="submit" data-i18n="label.send"
-            class="w-full flex items-center justify-center gap-2 bg-primary text-white px-4 py-3 rounded-lg shadow-elegant hover:opacity-90 transition"></button>
-        </form>
-      </div>
+              placeholder="Correo electrónico" />
+            <textarea name="message" rows="5" data-i18n-placeholder="label.message" required
+              placeholder="Mensaje"></textarea>
 
-      <div class="space-y-6 animate-scale-in">
-        <div class="bg-white rounded-xl shadow-elegant p-6">
-          <h3 class="flex items-center gap-2 text-xl font-semibold mb-3">
-            📧 <span data-i18n="contact.email.title"></span>
-          </h3>
-          <a href="mailto:vittorio.caiafa@example.com" class="text-primary hover:underline">
-            vittorio.caiafa@example.com
-          </a>
+            <button type="submit" data-i18n="label.send"></button>
+          </form>
         </div>
 
-        <div class="bg-white rounded-xl shadow-elegant p-6">
-          <h3 class="flex items-center gap-2 text-xl font-semibold mb-3">
-            📍 <span data-i18n="label.location"></span>
-          </h3>
-          <p data-i18n="info.location" class="text-muted-foreground"></p>
-        </div>
+        <!-- Info de contacto -->
+        <div class="contact-info animate-scale-in">
+          <div class="card">
+            <h3 class="card-title">
+              📧 <span data-i18n="label.email"></span>
+            </h3>
+            <a href="mailto:vittorio.caiafa@example.com" class="contact-link">
+              vittorio.caiafa@example.com
+            </a>
+          </div>
 
-        <div class="bg-white rounded-xl shadow-elegant p-6">
-          <h3 data-i18n="label.social" class="text-xl font-semibold mb-3"></h3>
-          <a href="https://linkedin.com/in/vittorio-caiafa" target="_blank" class="block text-primary hover:underline">
-            LinkedIn →
-          </a>
-          <a href="https://github.com/vittoriocaiafa" target="_blank" class="block text-primary hover:underline">
-            GitHub →
-          </a>
+          <div class="card">
+            <h3 class="card-title">
+              📍 <span data-i18n="label.location"></span>
+            </h3>
+            <p data-i18n="info.location" class="card-description"></p>
+          </div>
+
+          <div class="card">
+            <h3 data-i18n="label.social" class="card-title"></h3>
+            <a href="https://linkedin.com/in/vittorio-caiafa" target="_blank" class="contact-link" data-i18n="socials.linkedin"></a>
+            <a href="https://github.com/vittoriocaiafa" target="_blank" class="contact-link" data-i18n="socials.github"></a>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+</body>
+
+</html>

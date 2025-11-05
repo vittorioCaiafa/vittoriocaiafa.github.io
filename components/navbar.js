@@ -55,19 +55,19 @@ class NavbarComp extends HTMLElement {
           </button>
           <ul class="nav-menu">
             <li class="nav-item">
-              <a href="#about" class="nav-link">Sobre Mí</a>
+              <a href="#about" class="nav-link" data-i18n="label.aboutMe"></a>
             </li>
             <li class="nav-item">
-              <a href="#skills" class="nav-link">Habilidades</a>
+              <a href="#skills" class="nav-link" data-i18n="label.skills"></a>
             </li>
             <li class="nav-item">
-              <a href="#experience" class="nav-link">Experiencia</a>
+              <a href="#experience" class="nav-link" data-i18n="label.experience"></a>
             </li>
             <li class="nav-item">
-              <a href="#projects" class="nav-link">Proyectos</a>
+              <a href="#projects" class="nav-link" data-i18n="label.projects"></a>
             </li>
             <li class="nav-item">
-              <a href="#contact" class="nav-link">Contacto</a>
+              <a href="#contact" class="nav-link" data-i18n="label.contact"></a>
             </li>
             <li class="nav-item">
               <button onclick="toggleLanguage()" data-i18n="label.oppositeLanguage"></button>
