@@ -1,0 +1,33 @@
+export const translations = {
+    es: {
+        "label.oppositeLanguage": "🌐 EN",
+        "contact.title": "Contacto",
+        "contact.subtitle": "Si querés ponerte en contacto conmigo, completá el formulario o usá los medios que figuran a la derecha.",
+        "contact.form.title": "Envíame un mensaje",
+        "contact.form.subtitle": "Responderé lo antes posible.",
+        "contact.form.name": "Tu nombre",
+        "contact.form.email": "Tu correo electrónico",
+        "contact.form.message": "Tu mensaje",
+        "contact.form.button": "Enviar mensaje",
+        "contact.email.title": "Correo electrónico",
+        "contact.location.title": "Ubicación",
+        "contact.location.value": "Montevideo, Uruguay",
+        "contact.social.title": "Conectemos",
+    },
+    en: {
+        "label.oppositeLanguage": "🌐 ES",
+        "contact.title": "Contact",
+        "contact.subtitle": "If you’d like to get in touch, fill out the form or use one of the methods on the right.",
+        "contact.form.title": "Send me a message",
+        "contact.form.subtitle": "I’ll reply as soon as possible.",
+        "contact.form.name": "Your name",
+        "contact.form.email": "Your email",
+        "contact.form.message": "Your message",
+        "contact.form.button": "Send Message",
+        "contact.email.title": "Email",
+        "contact.location.title": "Location",
+        "contact.location.value": "Montevideo, Uruguay",
+        "contact.social.title": "Let's connect",
+    },
+
+};

@@ -1,0 +1,174 @@
+/* ===== About Section ===== */
+
+#about {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: 4rem;
+    background: #fff;
+    color: #1a1a1a;
+    font-family: 'Inter', sans-serif;
+}
+
+#about .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+}
+
+@media (min-width: 768px) {
+    #about .container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Texto principal */
+#about h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #0f172a;
+    line-height: 1.2;
+}
+
+#about h2 {
+    font-size: 1.75rem;
+    font-weight: 300;
+    color: #64748b;
+}
+
+#about p {
+    color: #475569;
+    line-height: 1.6;
+}
+
+/* Título y subtítulo */
+#about .text-primary {
+    color: #2563eb;
+    font-weight: 600;
+    font-size: 1.125rem;
+}
+
+/* Botones */
+#about .buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding-top: 1rem;
+}
+
+#about .btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.75rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+#about .btn.primary {
+    background-color: #2563eb;
+    color: white;
+    box-shadow: 0 4px 14px rgba(37, 99, 235, 0.3);
+}
+
+#about .btn.primary:hover {
+    background-color: #1d4ed8;
+}
+
+#about .btn.outline {
+    border: 2px solid #cbd5e1;
+    color: #334155;
+    background: transparent;
+}
+
+#about .btn.outline:hover {
+    border-color: #2563eb;
+    color: #2563eb;
+}
+
+/* Iconos sociales */
+#about .socials {
+    display: flex;
+    gap: 1rem;
+    padding-top: 1rem;
+}
+
+#about .socials a {
+    color: #64748b;
+    transition: color 0.3s;
+}
+
+#about .socials a:hover {
+    color: #2563eb;
+}
+
+/* Avatar visual */
+#about .avatar-wrapper {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+#about .avatar-glow {
+    position: absolute;
+    inset: 0;
+    border-radius: 1.5rem;
+    background: linear-gradient(to bottom right, rgba(37, 99, 235, 0.2), rgba(16, 185, 129, 0.2));
+    filter: blur(40px);
+    z-index: 0;
+}
+
+#about .avatar {
+    position: relative;
+    width: 100%;
+    max-width: 320px;
+    aspect-ratio: 1 / 1;
+    border-radius: 1.5rem;
+    background: linear-gradient(to bottom right, #e2e8f0, #f8fafc);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5rem;
+    font-weight: 700;
+    color: rgba(37, 99, 235, 0.2);
+}
+
+/* Animaciones */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.animate-slide-in {
+    animation: slideIn 0.8s ease forwards;
+}
+
+.animate-scale-in {
+    animation: scaleIn 0.8s ease forwards;
+}

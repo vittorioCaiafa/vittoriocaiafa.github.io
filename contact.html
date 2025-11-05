@@ -1,91 +1,64 @@
-<!DOCTYPE html>
-<html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portafolio | Vittorio Caiafa</title>
-    <!-- CSS -->
-    <!-- CSS -> local -->
-    <link rel="stylesheet" href="css/background.css" />
-    <link rel="stylesheet" href="css/body.css" />
-    <link rel="stylesheet" href="css/button.css" />
-    <link rel="stylesheet" href="css/movement.css" />
-    <link rel="stylesheet" href="css/navbar.css" />
-    <link rel="stylesheet" href="css/footer.css" />
-    <link rel="stylesheet" href="css/title.css" />
-    <link rel="stylesheet" href="css/contact.css" />
-    <link rel="stylesheet" href="css/hero.css" />
-    <!-- CSS -> github -->
-    <link
-      rel="stylesheet"
-      href="https://raw.githubusercontent.com/vittorioCaiafa/vittoriocaiafa.github.io/main/css/background.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://raw.githubusercontent.com/vittorioCaiafa/vittoriocaiafa.github.io/main/css/body.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://raw.githubusercontent.com/vittorioCaiafa/vittoriocaiafa.github.io/main/css/footer.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://raw.githubusercontent.com/vittorioCaiafa/vittoriocaiafa.github.io/main/css/navbar.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://raw.githubusercontent.com/vittorioCaiafa/vittoriocaiafa.github.io/main/css/section.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://raw.githubusercontent.com/vittorioCaiafa/vittoriocaiafa.github.io/main/css/movement.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://raw.githubusercontent.com/vittorioCaiafa/vittoriocaiafa.github.io/main/css/button.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://raw.githubusercontent.com/vittorioCaiafa/vittoriocaiafa.github.io/main/css/title.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://raw.githubusercontent.com/vittorioCaiafa/vittoriocaiafa.github.io/main/css/contact.css"
-    />
-    <!-- SECTIONS -->
-    <script src="sections/language-section.js" defer></script>
-    <script src="sections/contact-section.js" defer></script>
-    <!-- COMPONENTS -->
-    <script src="components/section-left.js" defer></script>
-    <script src="components/section-right.js" defer></script>
-    <script src="components/section-double.js" defer></script>
-    <script src="components/footer.js" defer></script>
-    <script src="components/navbar.js" defer></script>
-    <script src="components/button.js" defer></script>
-    <!-- SCRIPT -->
-    <script src="js/script.js" defer></script>
-  </head>
-  <body>
-    <!-- BACKGROUNDS -->
-    <!-- Background Video -->
-    <video autoplay muted loop playsinline class="background-video">
-      <source src="assets/backgrounds/bg.mp4" type="video/mp4" />
-      <source
-        src="https://raw.githubusercontent.com/vittorioCaiafa/vittoriocaiafa.github.io/main/assets/backgrounds/bg.mp4"
-        type="video/mp4"
-      />
-      Your browser does not support the video tag.
-    </video>
-
-    <!-- PAGE CONTENT -->
-    <div class="content">
-      <header>
-        <navbar-comp></navbar-comp>
-      </header>
-      <section id="contact">
-        <contact-section></contact-section>
-      </section>
-      <footer-comp></footer-comp>
+<head>
+  <link rel="stylesheet" href="css/contact.css">
+  <script type="module" src="js/i18n.js"></script>
+</head>
+<section id="contact" class="min-h-screen py-20">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12 animate-fade-in">
+      <h2 data-i18n="contact.title" class="text-4xl font-bold text-foreground mb-4"></h2>
+      <p data-i18n="contact.subtitle" class="text-lg text-muted-foreground max-w-2xl mx-auto"></p>
     </div>
-  </body>
-</html>
+
+    <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
+      <div class="bg-white rounded-xl shadow-elegant p-6 animate-slide-in">
+        <h3 data-i18n="contact.form.title" class="text-2xl font-semibold mb-2"></h3>
+        <p data-i18n="contact.form.subtitle" class="text-muted-foreground mb-6"></p>
+
+        <form class="space-y-4" action="mailto:vittorio.caiafa@example.com" method="POST" enctype="text/plain">
+          <div>
+            <input type="text" name="name" data-i18n-placeholder="contact.form.name" required
+              class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary" />
+          </div>
+          <div>
+            <input type="email" name="email" data-i18n-placeholder="contact.form.email" required
+              class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary" />
+          </div>
+          <div>
+            <textarea name="message" data-i18n-placeholder="contact.form.message" rows="5" required
+              class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary"></textarea>
+          </div>
+          <button type="submit" data-i18n="contact.form.button"
+            class="w-full flex items-center justify-center gap-2 bg-primary text-white px-4 py-3 rounded-lg shadow-elegant hover:opacity-90 transition"></button>
+        </form>
+      </div>
+
+      <div class="space-y-6 animate-scale-in">
+        <div class="bg-white rounded-xl shadow-elegant p-6">
+          <h3 class="flex items-center gap-2 text-xl font-semibold mb-3">
+            📧 <span data-i18n="contact.email.title"></span>
+          </h3>
+          <a href="mailto:vittorio.caiafa@example.com" class="text-primary hover:underline">
+            vittorio.caiafa@example.com
+          </a>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-elegant p-6">
+          <h3 class="flex items-center gap-2 text-xl font-semibold mb-3">
+            📍 <span data-i18n="contact.location.title"></span>
+          </h3>
+          <p data-i18n="contact.location.value" class="text-muted-foreground"></p>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-elegant p-6">
+          <h3 data-i18n="contact.social.title" class="text-xl font-semibold mb-3"></h3>
+          <a href="https://linkedin.com/in/vittorio-caiafa" target="_blank" class="block text-primary hover:underline">
+            LinkedIn →
+          </a>
+          <a href="https://github.com/vittoriocaiafa" target="_blank" class="block text-primary hover:underline">
+            GitHub →
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
