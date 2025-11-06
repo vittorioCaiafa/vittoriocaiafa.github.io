@@ -78,6 +78,8 @@ export const en = {
     "projects": {
         "viewProjects": "View Projects",
         "title": "Projects",
+        "code": "Code",
+        "demo": "Demo",
         "subtitle": "Some of the developments and tools I've worked on.",
         "project1": {
             "title": "HomeDesign",

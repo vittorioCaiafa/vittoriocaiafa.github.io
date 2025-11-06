@@ -66,7 +66,10 @@
 
 .skill-card:hover .skill-header .icon {
     background: var(--primary, #007bff);
-    color: #fff;
+}
+
+.skill-card img:hover {
+    filter: brightness(0) !important;
 }
 
 .skill-header h3 {

@@ -78,6 +78,8 @@ export const es = {
     "projects": {
         "viewProjects": "Ver proyectos",
         "title": "Proyectos",
+        "code": "Código",
+        "demo": "Demo",
         "subtitle": "Algunos de los desarrollos y herramientas en los que trabajé.",
         "project1": {
             "title": "HomeDesign",
