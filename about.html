@@ -68,6 +68,28 @@
       </div>
     </div>
   </section>
+
+  <script>
+    // Navegar en la página padre cuando se hace clic en los botones
+    document.addEventListener('DOMContentLoaded', () => {
+      const contactBtn = document.querySelector('a[href="#contact"]');
+      const projectsBtn = document.querySelector('a[href="#projects"]');
+
+      if (contactBtn) {
+        contactBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          window.parent.location.hash = 'contact';
+        });
+      }
+
+      if (projectsBtn) {
+        projectsBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          window.parent.location.hash = 'projects';
+        });
+      }
+    });
+  </script>
 </body>
 
 </html>
