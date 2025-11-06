@@ -45,6 +45,36 @@
   <script src="components/button.js" defer></script>
   <script type="module" src="js/i18n.js"></script>
   <script src="js/script.js" defer></script>
+  <style>
+    /* Mobile iframe heights */
+    @media (max-width: 767px) {
+      #about iframe {
+        height: 130vh !important;
+      }
+      #skills iframe {
+        height: 195vh !important;
+      }
+      #experience iframe {
+        height: 170vh !important;
+      }
+      #projects iframe {
+        height: 180vh !important;
+      }
+      #contact iframe {
+        height: 150vh !important;
+      }
+    }
+    
+    /* Desktop iframe heights */
+    @media (min-width: 768px) {
+      #about iframe {
+        height: 100vh !important;
+      }
+      #skills iframe {
+        height: 100vh !important;
+      }
+    }
+  </style>
 </head>
 
 <body>

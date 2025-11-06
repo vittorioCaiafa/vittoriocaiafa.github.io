@@ -25,6 +25,15 @@
     }
 }
 
+/* Mobile Styles */
+@media (max-width: 767px) {
+    #about {
+        padding-top: 3rem;
+        align-items: flex-start;
+        padding-top: 5rem;
+    }
+}
+
 /* Texto principal */
 #about h1 {
     font-size: 3rem;
