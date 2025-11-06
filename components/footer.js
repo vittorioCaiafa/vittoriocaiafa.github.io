@@ -6,21 +6,19 @@ class Footer extends HTMLElement {
 
   connectedCallback() {
     this.shadowRoot.innerHTML = `
-      <link rel="stylesheet" href="css/footer.css" />
+      <style>
+        footer {
+          background-color: #f5f5f5;
+          color: #666;
+          text-align: center;
+          padding: 1.5rem 0;
+          font-family: "Outfit", sans-serif;
+          font-size: 0.9rem;
+          width: 100%;
+        }
+      </style>
       <footer>
-        <div class="footer-content">
-          <div class="copyright">
-            Copyright &copy; 2025 Vittorio Caiafa
-          </div>
-          <div class="social-icons">
-            <a href="https://www.linkedin.com/in/vittorio-caiafa/" target="_blank" title="LinkedIn"><img
-            src="assets/icons/socials/linkedin.png" /></a>
-            <a href="https://github.com/vittorioCaiafa" target="_blank" title="GitHub"><img
-            src="assets/icons/socials/github.png" /></a>
-            <a href="https://www.instagram.com/vittocaiafa/" target="_blank" title="Instagram"><img
-            src="assets/icons/socials/instagram.png" /></a>
-          </div>
-        </div>
+        <p>&copy; 2025 Vittorio Caiafa. All rights reserved.</p>
       </footer>
     `;
   }
