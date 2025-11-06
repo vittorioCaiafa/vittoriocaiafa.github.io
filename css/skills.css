@@ -60,6 +60,8 @@
     background: rgba(0, 123, 255, 0.1);
     color: var(--primary, #007bff);
     transition: background 0.3s, color 0.3s;
+    width: 30px;
+    height: 30px;
 }
 
 .skill-card:hover .skill-header .icon {
