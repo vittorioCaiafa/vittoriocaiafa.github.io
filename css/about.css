@@ -261,9 +261,13 @@ html, body {
     font-size: 2.5rem;
   }
 
+  #about .avatar-wrapper {
+    order: -1;
+  }
+
   #about .avatar {
     margin: 0 auto;
-    max-width: 260px;
+    max-width: 220px;
   }
 }
 

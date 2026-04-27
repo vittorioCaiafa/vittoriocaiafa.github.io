@@ -55,6 +55,15 @@
     } catch (_) {}
   });
 
+  // Listen for content-height reports from iframes and resize them exactly
+  window.addEventListener('message', function (evt) {
+    if (!evt.data || evt.data.type !== 'iframe-height') return;
+    var section = document.getElementById(evt.data.id);
+    if (!section) return;
+    var iframe = section.querySelector('iframe');
+    if (iframe) iframe.style.height = (evt.data.height + 32) + 'px';
+  });
+
   // IntersectionObserver on sections
   var observer = new IntersectionObserver(function (entries) {
     entries.forEach(function (entry) {

@@ -190,6 +190,14 @@
           hide();
         }
       });
+
+      // Report actual content height to parent so the iframe is sized exactly
+      window.addEventListener('load', function () {
+        setTimeout(function () {
+          var h = Math.max(document.documentElement.scrollHeight, document.body.scrollHeight);
+          window.parent.postMessage({ type: 'iframe-height', id: 'experience', height: h }, '*');
+        }, 300);
+      });
     })();
   </script>
 </body>

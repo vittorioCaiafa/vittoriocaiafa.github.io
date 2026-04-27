@@ -27,38 +27,22 @@
   <script src="js/script.js" defer></script>
   <script src="js/scroll-reveal.js" defer></script>
   <style>
-    /* Mobile iframe heights */
+    /* Mobile iframe heights — no !important so JS auto-size can override */
     @media (max-width: 767px) {
-      #about iframe {
-        height: 140vh !important;
-      }
-
-      #skills iframe {
-        height: 230vh !important;
-      }
-
-      #experience iframe {
-        height: 230vh !important;
-      }
-
-      #projects iframe {
-        height: 210vh !important;
-      }
-
-      #contact iframe {
-        height: 172vh !important;
-      }
+      #about iframe      { height: 140vh; }
+      #skills iframe     { height: 230vh; }
+      #experience iframe { height: 280vh; }
+      #projects iframe   { height: 210vh; }
+      #contact iframe    { height: 172vh; }
     }
 
     /* Desktop iframe heights */
     @media (min-width: 768px) {
-      #about iframe {
-        height: 100vh !important;
-      }
-
-      #skills iframe {
-        height: 100vh !important;
-      }
+      #about iframe      { height: 100vh; }
+      #skills iframe     { height: 100vh; }
+      #experience iframe { height: 220vh; }
+      #projects iframe   { height: 100vh; }
+      #contact iframe    { height: 100vh; }
     }
   </style>
 </head>
@@ -85,15 +69,15 @@
     </section>
     <section id="experience" style="overflow: hidden;">
       <iframe src="experience.html" scrolling="no"
-        style="width: 100%; height: 220vh; border: none; overflow: hidden; display: block;"></iframe>
+        style="width: 100%; border: none; overflow: hidden; display: block;"></iframe>
     </section>
     <section id="projects" style="overflow: hidden;">
       <iframe src="projects.html" scrolling="no"
-        style="width: 100%; height: 100vh; border: none; overflow: hidden; display: block;"></iframe>
+        style="width: 100%; border: none; overflow: hidden; display: block;"></iframe>
     </section>
     <section id="contact" style="overflow: hidden;">
       <iframe src="contact.html" scrolling="no"
-        style="width: 100%; height: 100vh; border: none; overflow: hidden; display: block;"></iframe>
+        style="width: 100%; border: none; overflow: hidden; display: block;"></iframe>
     </section>
     <footer-comp></footer-comp>
   </div>
