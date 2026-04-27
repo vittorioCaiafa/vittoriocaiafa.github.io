@@ -145,7 +145,7 @@ export const es = {
             "task4": "Integraciones con servicios externos."
         },
         "job3": {
-            "title": "Desarrollador Fullstack",
+            "title": "Desarrollador Fullstack (Tesis)",
             "company": "CodeQuality",
             "period": "Mar 2024 - Abr 2025",
             "location": "common.remote",
