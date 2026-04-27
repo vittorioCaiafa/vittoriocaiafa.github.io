@@ -37,13 +37,22 @@
     if (!iframe) return;
     state[id].iframe = iframe;
 
-    iframe.addEventListener('load', function () {
+    function markReady() {
+      if (state[id].ready) return;
       state[id].ready = true;
-      // If already in viewport when iframe finished loading, reveal immediately
       if (state[id].visible) {
         setTimeout(function () { send(id, true); }, 80);
       }
-    });
+    }
+
+    iframe.addEventListener('load', markReady);
+
+    // If the iframe already loaded before this deferred script ran, catch it now
+    try {
+      if (iframe.contentDocument && iframe.contentDocument.readyState === 'complete') {
+        markReady();
+      }
+    } catch (_) {}
   });
 
   // IntersectionObserver on sections
