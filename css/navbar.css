@@ -135,10 +135,15 @@
 .nav-toggle {
   display: none;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background: transparent;
   border: none;
   cursor: pointer;
   padding: 0.5rem;
+  width: 36px;
+  height: 36px;
+  gap: 0;
 }
 
 .nav-toggle span {
@@ -146,20 +151,22 @@
   height: 2px;
   background: #94a3b8;
   margin: 3px 0;
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease, opacity 0.2s ease;
   border-radius: 2px;
+  display: block;
 }
 
 .nav-toggle.active span:nth-child(1) {
-  transform: rotate(45deg) translate(4px, 5px);
+  transform: translateY(8px) rotate(45deg);
 }
 
 .nav-toggle.active span:nth-child(2) {
   opacity: 0;
+  transform: scaleX(0);
 }
 
 .nav-toggle.active span:nth-child(3) {
-  transform: rotate(-45deg) translate(4px, -5px);
+  transform: translateY(-8px) rotate(-45deg);
 }
 
 /* Mobile */
@@ -172,15 +179,19 @@
     position: fixed;
     top: 64px;
     left: 0;
+    right: 0;
+    box-sizing: border-box;
     flex-direction: column;
     background: rgba(10, 15, 30, 0.97);
     backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
     width: 100%;
     padding: 1.5rem 2rem;
     gap: 0.4rem;
     transform: translateX(-100%);
     transition: transform 0.3s ease;
     border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    z-index: 999;
   }
 
   .nav-menu.active {
