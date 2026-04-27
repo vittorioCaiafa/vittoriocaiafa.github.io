@@ -159,6 +159,12 @@ export const en = {
             "company": "Universidad ORT Uruguay",
             "period": "Mar 2020 - Apr 2025",
             "description": "Extremely comprehensive training in software development, data structures, databases and agile project management."
+        },
+        "edu2": {
+            "title": "School & High School",
+            "company": "Colegio Inglés",
+            "period": "2004 - 2019",
+            "description": "Complete pre-school, primary and secondary education at a bilingual institution, building a strong foundation in sciences, mathematics and English."
         }
     },
     "skills": {

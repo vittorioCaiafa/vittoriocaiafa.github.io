@@ -1,20 +1,60 @@
 @import url("https://fonts.googleapis.com/css2?family=Cal+Sans:wght@400;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;300;400;600;700&display=swap");
 
+:root {
+  --bg: #0a0f1e;
+  --bg-surface: #0f172a;
+  --primary: #3b82f6;
+  --primary-glow: rgba(59, 130, 246, 0.3);
+  --cyan: #22d3ee;
+  --text: #e2e8f0;
+  --muted: #94a3b8;
+  --foreground: #e2e8f0;
+  --muted-foreground: #94a3b8;
+  --card-bg: rgba(255, 255, 255, 0.04);
+  --card-border: rgba(255, 255, 255, 0.08);
+  --shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
   font-family: "Outfit", sans-serif;
-  font-weight: lighter;
+  font-weight: 300;
   font-style: normal;
   margin: 0;
   padding: 0;
-  color: white;
+  color: #e2e8f0;
   position: relative;
   overflow-x: hidden;
-  font-size: 1.4em;
+  background: #0a0f1e;
+}
+
+/* Ambient glow orbs on the main page */
+body::before {
+  content: '';
+  position: fixed;
+  top: -15%;
+  right: -8%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.10) 0%, transparent 65%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  bottom: -10%;
+  left: -8%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(34, 211, 238, 0.07) 0%, transparent 65%);
+  pointer-events: none;
+  z-index: 0;
 }
 
 h1 {
@@ -23,51 +63,17 @@ h1 {
 }
 
 h2 {
-  transition: transform 0.4s ease, color 0.3s ease;
-  filter: drop-shadow(0 0 6px #27dddd);
-}
-
-h2:hover {
-  color: #27dddd !important;
-  transition: 0.5s;
-}
-
-.linear-gradient-sky-blue {
-  background: linear-gradient(135deg, #28727b 0%, #27dddd 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  display: inline-block;
+  transition: transform 0.3s ease;
 }
 
 section {
-  margin-top: 5%;
-  margin-bottom: 10%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  z-index: 1;
 }
 
-.intro {
-  text-align: left;
-  margin-left: 15%;
-  margin-top: 10%;
-  margin-bottom: 150px;
-}
-
-.image-row {
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-  align-items: center;
-}
-
-.image-row img {
-  width: 150px;
-  height: auto;
-  object-fit: cover;
-}
-
-.side-by-side-section {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
+.content {
+  position: relative;
+  z-index: 1;
 }

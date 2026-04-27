@@ -8,13 +8,14 @@ class Footer extends HTMLElement {
     this.shadowRoot.innerHTML = `
       <style>
         footer {
-          background-color: #f5f5f5;
-          color: #666;
+          background: rgba(10, 15, 30, 0.96);
+          color: #334155;
           text-align: center;
           padding: 1.5rem 0;
           font-family: "Outfit", sans-serif;
-          font-size: 0.9rem;
+          font-size: 0.82rem;
           width: 100%;
+          border-top: 1px solid rgba(255, 255, 255, 0.06);
         }
       </style>
       <footer>

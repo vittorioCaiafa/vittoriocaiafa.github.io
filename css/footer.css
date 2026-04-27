@@ -1,11 +1,10 @@
 footer {
-  background-color: #111;
-  color: white;
-  padding: 20px 0;
+  background: rgba(10, 15, 30, 0.96);
+  color: #475569;
+  padding: 1.5rem 0;
   position: relative;
-  font-family: sans-serif;
-  margin-top: 10%;
-  bottom: 0;
+  font-family: "Outfit", sans-serif;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 .footer-content {
@@ -13,49 +12,38 @@ footer {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  margin-inline: 15%;
-  padding-top: 20px; /* espacio entre línea y contenido */
-  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  gap: 1rem;
 }
 
-/* Línea horizontal interna */
-.footer-content::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 3px;
-  width: 100%;
-  background-color: #27dddd;
-}
-
-/* Copyright a la izquierda */
 .copyright {
-  font-size: 14px;
-  opacity: 0.7;
+  font-size: 0.82rem;
+  color: #334155;
 }
 
-/* Social icons a la derecha */
 .social-icons {
   display: flex;
-  gap: 15px;
+  gap: 12px;
 }
 
-/* Estilo de los íconos */
 .social-icons img {
-  filter: brightness(0.5);
-  width: 20px;
-  height: 20px;
-  transition: transform 0.4s ease, filter 0.3s ease;
+  filter: brightness(0.35);
+  width: 18px;
+  height: 18px;
+  transition: transform 0.3s ease, filter 0.3s ease;
 }
 
 .social-icons img:hover {
-  filter: brightness(90%);
+  filter: brightness(0) invert(0.5) sepia(1) saturate(3) hue-rotate(190deg);
+  transform: translateY(-2px);
 }
 
 @media (max-width: 768px) {
   .footer-content {
     flex-direction: column;
     align-items: center;
+    text-align: center;
   }
 }

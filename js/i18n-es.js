@@ -159,6 +159,12 @@ export const es = {
             "company": "Universidad ORT Uruguay",
             "period": "Mar 2020 - Abr 2025",
             "description": "Formación integral en desarrollo de software, estructuras de datos, bases de datos y gestión de proyectos ágiles."
+        },
+        "edu2": {
+            "title": "Primaria y Secundaria",
+            "company": "Colegio Inglés",
+            "period": "2004 - 2019",
+            "description": "Formación completa de jardín de infantes, primaria y secundaria en una institución bilingüe, con sólida base en ciencias, matemáticas e idioma inglés."
         }
     },
     "skills": {
