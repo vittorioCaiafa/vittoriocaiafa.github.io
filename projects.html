@@ -13,14 +13,14 @@
 <body>
   <section id="projects" class="projects-section">
     <div class="container">
-      <div class="section-header">
+      <div class="section-header reveal-el reveal-from-bottom">
         <h2 class="section-title" data-i18n="projects.title"></h2>
         <p class="section-subtitle" data-i18n="projects.subtitle"></p>
       </div>
 
       <div class="projects-grid">
-        <!-- Proyecto 1 -->
-        <div class="card project-card">
+        <!-- Proyecto 1 — desde la izquierda -->
+        <div class="card project-card reveal-el reveal-from-left">
           <div class="card-header">
             <h3 class="card-title" data-i18n="projects.project1.title"></h3>
             <p class="card-description" data-i18n="projects.project1.description"></p>
@@ -47,8 +47,8 @@
           </div>
         </div>
 
-        <!-- Proyecto 2 -->
-        <div class="card project-card">
+        <!-- Proyecto 2 — desde la derecha -->
+        <div class="card project-card reveal-el reveal-from-right">
           <div class="card-header">
             <h3 class="card-title" data-i18n="projects.project2.title"></h3>
             <p class="card-description" data-i18n="projects.project2.description"></p>
@@ -74,8 +74,8 @@
           </div>
         </div>
 
-        <!-- Proyecto 3 -->
-        <div class="card project-card">
+        <!-- Proyecto 3 — desde la izquierda -->
+        <div class="card project-card reveal-el reveal-from-left">
           <div class="card-header">
             <h3 class="card-title" data-i18n="projects.project3.title"></h3>
             <p class="card-description" data-i18n="projects.project3.description"></p>
@@ -101,8 +101,8 @@
           </div>
         </div>
 
-        <!-- Proyecto 4 -->
-        <div class="card project-card">
+        <!-- Proyecto 4 — desde la derecha -->
+        <div class="card project-card reveal-el reveal-from-right">
           <div class="card-header">
             <h3 class="card-title" data-i18n="projects.project4.title"></h3>
             <p class="card-description" data-i18n="projects.project4.description"></p>
@@ -130,6 +130,39 @@
       </div>
     </div>
   </section>
+
+  <script>
+    (function () {
+      var STAGGER = 120;
+
+      function reveal() {
+        var items = document.querySelectorAll('.reveal-el');
+        items.forEach(function (el, i) {
+          el.style.transitionDelay = (i * STAGGER) + 'ms';
+          requestAnimationFrame(function () {
+            el.classList.add('revealed');
+          });
+        });
+      }
+
+      function hide() {
+        var items = document.querySelectorAll('.reveal-el');
+        items.forEach(function (el) {
+          el.style.transitionDelay = '0ms';
+          el.classList.remove('revealed');
+        });
+      }
+
+      window.addEventListener('message', function (evt) {
+        if (!evt.data || evt.data.type !== 'scroll-reveal') return;
+        if (evt.data.visible) {
+          reveal();
+        } else if (evt.data.dir === 'up') {
+          hide();
+        }
+      });
+    })();
+  </script>
 </body>
 
 </html>

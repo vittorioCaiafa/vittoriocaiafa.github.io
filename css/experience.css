@@ -202,3 +202,20 @@ html, body {
     transform: translateY(0);
   }
 }
+
+/* ===== Scroll Reveal ===== */
+.reveal-el {
+  opacity: 0;
+  transition:
+    opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-from-bottom { transform: translateY(50px); }
+.reveal-from-left   { transform: translateX(-60px); }
+.reveal-from-right  { transform: translateX(60px); }
+
+.reveal-el.revealed {
+  opacity: 1;
+  transform: none !important;
+}

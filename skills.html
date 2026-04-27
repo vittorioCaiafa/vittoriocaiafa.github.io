@@ -13,14 +13,14 @@
 <body>
   <section id="skills">
     <div class="container">
-      <div class="section-header">
+      <div class="section-header reveal-el reveal-from-bottom">
         <h2 data-i18n="skills.title"></h2>
         <p data-i18n="skills.subtitle"></p>
       </div>
 
       <div class="grid">
         <!-- Frontend -->
-        <div class="skill-card">
+        <div class="skill-card reveal-el reveal-from-bottom">
           <div class="skill-header">
             <img src="assets/icons/code.png" alt="Frontend" class="icon" />
             <h3 data-i18n="skills.frontend.title"></h3>
@@ -36,7 +36,7 @@
         </div>
 
         <!-- Backend -->
-        <div class="skill-card">
+        <div class="skill-card reveal-el reveal-from-bottom">
           <div class="skill-header">
             <img src="assets/icons/terminal.png" alt="Backend" class="icon" />
             <h3 data-i18n="skills.backend.title"></h3>
@@ -52,7 +52,7 @@
         </div>
 
         <!-- Bases de datos -->
-        <div class="skill-card">
+        <div class="skill-card reveal-el reveal-from-bottom">
           <div class="skill-header">
             <img src="assets/icons/db.png" alt="Bases de Datos" class="icon" />
             <h3 data-i18n="skills.database.title"></h3>
@@ -67,7 +67,7 @@
         </div>
 
         <!-- Cloud & DevOps -->
-        <div class="skill-card">
+        <div class="skill-card reveal-el reveal-from-bottom">
           <div class="skill-header">
             <img src="assets/icons/cloud.png" alt="Cloud & DevOps" class="icon" />
             <h3 data-i18n="skills.cloud.title"></h3>
@@ -83,7 +83,7 @@
         </div>
 
         <!-- Control de versiones -->
-        <div class="skill-card">
+        <div class="skill-card reveal-el reveal-from-bottom">
           <div class="skill-header">
             <img src="assets/icons/git.png" alt="Control de Versiones" class="icon" />
             <h3 data-i18n="skills.versionControl.title"></h3>
@@ -98,7 +98,7 @@
         </div>
 
         <!-- Arquitectura -->
-        <div class="skill-card">
+        <div class="skill-card reveal-el reveal-from-bottom">
           <div class="skill-header">
             <img src="assets/icons/layers.png" alt="Arquitectura" class="icon" />
             <h3 data-i18n="skills.architecture.title"></h3>
@@ -114,6 +114,39 @@
       </div>
     </div>
   </section>
+
+  <script>
+    (function () {
+      var STAGGER = 85; // ms between cards
+
+      function reveal() {
+        var items = document.querySelectorAll('.reveal-el');
+        items.forEach(function (el, i) {
+          el.style.transitionDelay = (i * STAGGER) + 'ms';
+          requestAnimationFrame(function () {
+            el.classList.add('revealed');
+          });
+        });
+      }
+
+      function hide() {
+        var items = document.querySelectorAll('.reveal-el');
+        items.forEach(function (el) {
+          el.style.transitionDelay = '0ms';
+          el.classList.remove('revealed');
+        });
+      }
+
+      window.addEventListener('message', function (evt) {
+        if (!evt.data || evt.data.type !== 'scroll-reveal') return;
+        if (evt.data.visible) {
+          reveal();
+        } else if (evt.data.dir === 'up') {
+          hide();
+        }
+      });
+    })();
+  </script>
 </body>
 
 </html>

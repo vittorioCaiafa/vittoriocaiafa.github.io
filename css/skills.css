@@ -95,6 +95,20 @@ html, body {
   gap: 1.1rem;
 }
 
+@media (max-width: 767px) {
+  #skills {
+    padding: 3.5rem 0 3rem;
+  }
+
+  #skills .grid {
+    grid-template-columns: 1fr;
+  }
+
+  #skills h2 {
+    font-size: 2rem;
+  }
+}
+
 .skill-card {
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.07);
@@ -164,4 +178,21 @@ html, body {
   background: rgba(59, 130, 246, 0.2);
   border-color: rgba(59, 130, 246, 0.35);
   color: #bfdbfe;
+}
+
+/* ===== Scroll Reveal ===== */
+.reveal-el {
+  opacity: 0;
+  transition:
+    opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-from-bottom { transform: translateY(55px); }
+.reveal-from-left   { transform: translateX(-55px); }
+.reveal-from-right  { transform: translateX(55px); }
+
+.reveal-el.revealed {
+  opacity: 1;
+  transform: none !important;
 }

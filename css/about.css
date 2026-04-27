@@ -267,34 +267,80 @@ html, body {
   }
 }
 
-/* Animations */
-@keyframes slideIn {
-  from {
-    opacity: 0;
-    transform: translateX(-30px);
-  }
+/* ===== Hero entrance: cancel block animation, stagger each child ===== */
+#about .text-content.animate-slide-in {
+  animation: none;
+  opacity: 1;
+  transform: none;
+}
+
+/* Elements enter from below individually */
+#about .intro .text-primary,
+#about .intro h1,
+#about .intro h2,
+#about .text-content > p,
+#about .location,
+#about .buttons,
+#about .socials {
+  opacity: 0;
+  transform: translateY(24px);
+  animation: heroItemIn 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+#about .intro .text-primary { animation-delay: 0.10s; }
+#about .intro h1            { animation-delay: 0.22s; }
+#about .intro h2            { animation-delay: 0.34s; }
+#about .text-content > p    { animation-delay: 0.46s; }
+#about .location            { animation-delay: 0.52s; }
+#about .buttons             { animation-delay: 0.64s; }
+#about .socials             { animation-delay: 0.78s; }
+
+@keyframes heroItemIn {
   to {
     opacity: 1;
-    transform: translateX(0);
+    transform: translateY(0);
   }
 }
 
-@keyframes scaleIn {
-  from {
-    opacity: 0;
-    transform: scale(0.93);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-.animate-slide-in {
-  animation: slideIn 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-}
-
+/* Avatar: scale in then float */
 .animate-scale-in {
   opacity: 0;
-  animation: scaleIn 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.15s forwards;
+  animation:
+    scaleIn 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.30s forwards,
+    avatarFloat 5s ease-in-out 1.6s infinite;
+}
+
+/* Glow pulse */
+#about .avatar-glow {
+  animation: glowPulse 3.5s ease-in-out 1.2s infinite;
+}
+
+/* Ambient orbs drift */
+#about::before { animation: orbDrift1 9s ease-in-out infinite; }
+#about::after  { animation: orbDrift2 12s ease-in-out 1s infinite; }
+
+/* Keyframes */
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.88); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+@keyframes avatarFloat {
+  0%, 100% { transform: translateY(0)    rotate(-0.4deg); }
+  50%       { transform: translateY(-12px) rotate( 0.4deg); }
+}
+
+@keyframes glowPulse {
+  0%, 100% { opacity: 0.55; transform: scale(1); }
+  50%       { opacity: 1;    transform: scale(1.10); }
+}
+
+@keyframes orbDrift1 {
+  0%, 100% { transform: translate(0,    0)    scale(1);    }
+  50%       { transform: translate(-18px, 14px) scale(1.05); }
+}
+
+@keyframes orbDrift2 {
+  0%, 100% { transform: translate(0,   0)    scale(1);    }
+  50%       { transform: translate(14px,-18px) scale(1.07); }
 }

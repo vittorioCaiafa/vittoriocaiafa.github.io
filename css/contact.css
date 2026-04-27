@@ -251,14 +251,26 @@ html, body {
   }
 }
 
-.animate-fade-in {
-  animation: fadeIn 0.8s ease forwards;
-}
-
-.animate-slide-in {
-  animation: slideIn 0.8s ease forwards;
-}
-
+/* Disable old CSS-triggered animations — scroll-reveal JS takes over */
+.animate-fade-in,
+.animate-slide-in,
 .animate-scale-in {
-  animation: scaleIn 0.8s ease forwards;
+  animation: none;
+}
+
+/* ===== Scroll Reveal ===== */
+.reveal-el {
+  opacity: 0;
+  transition:
+    opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-from-bottom { transform: translateY(50px); }
+.reveal-from-left   { transform: translateX(-60px); }
+.reveal-from-right  { transform: translateX(60px); }
+
+.reveal-el.revealed {
+  opacity: 1;
+  transform: none !important;
 }
